@@ -72,11 +72,10 @@ html, body {
     margin-bottom: 0;
 }
 
-@media (max-width: 1070px) {
-    .responsive-full-screen-section {
-        min-height: calc(100vh - 300px);
-    }
+.is-mobile .responsive-full-screen-section {
+    min-height: calc(100vh - 300px);
 }
+
 .responsive-full-screen-section a {
     text-decoration: none; /* Remove underline */
 }
