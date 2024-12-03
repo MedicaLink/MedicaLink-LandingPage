@@ -72,7 +72,7 @@ html, body {
     margin-bottom: 0;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1070px) {
     .responsive-full-screen-section {
         min-height: calc(100vh - 300px);
     }
