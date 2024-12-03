@@ -49,9 +49,6 @@
     border-color: #0b7bbe;
 }
 
-{
-    box-sizing: border-box; /* Include padding and border in element's total width/height */
-}
 
 html, body {
     height: 100%; /* Ensure body and html fill the entire screen */
@@ -64,7 +61,6 @@ html, body {
     align-items: center;
     justify-content: center;
     min-height: calc(100vh - 100px); /* Ensure the section takes at least full screen height */
-    max-height: 100vh;
     padding-top: 0; /* Add padding above */
     padding-bottom: 0; /* Add padding below */
     background-color: white; /* Plain white background */
@@ -77,10 +73,9 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: calc(100vh - 150px); /* Ensure the section takes at least full screen height */
-    max-height: 100vh;
+    min-height: calc(100vh - 175px); /* Ensure the section takes at least full screen height */
     padding-top: 0; /* Add padding above */
-    padding-bottom: 5%; /* Add padding below */
+    padding-bottom: 175px; /* Add padding below */
     background-color: white; /* Plain white background */
     margin-top: 0;
     margin-bottom: 0;
