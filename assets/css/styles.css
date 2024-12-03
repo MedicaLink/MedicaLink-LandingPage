@@ -63,7 +63,7 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 100vh; /* Ensure the section takes at least full screen height */
+    min-height: calc(100vh - 100px); /* Ensure the section takes at least full screen height */
     max-height: 100vh;
     padding-top: 0; /* Add padding above */
     padding-bottom: 0; /* Add padding below */
