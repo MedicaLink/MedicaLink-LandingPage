@@ -73,7 +73,7 @@ html, body {
 }
 
 .is-mobile .responsive-full-screen-section {
-    min-height: calc(100vh - 300px);
+    min-height: calc(100vh - 200px);
 }
 
 .responsive-full-screen-section a {
