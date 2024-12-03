@@ -5,11 +5,11 @@
 :root {
     --color-default-: ;
     --color-primary-: #0b7bbe;
-    --color-secondary-: #0b7bbe;
-    --color-tertiary-: #003b79;
-    --color-4-: ;
-    --color-5-: ;
-    --color-bg-: ;
+    --color-secondary-: #E1EFF7;
+    --color-tertiary-: #109367;
+    --color-4-: #CAEEEB;
+    --color-5-: #D7B9FF;
+    --color-bg-: #F1E5FF;
     --color-secondary-bg-: ;
 }
 /* -------------------------------------------------------------- */
@@ -38,4 +38,13 @@
 
 .bg-medicalink-blue {
     background: #0b7bbe;
+}
+
+.bg-mint-green {
+    background: #109367;
+}
+
+.border-medicalink-blue {
+    border: 1;
+    border-color: #0b7bbe;
 }
