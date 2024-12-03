@@ -72,10 +72,9 @@ html, body {
     margin-bottom: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
     .responsive-full-screen-section {
-        padding-top: -25%;  /* Reduce padding for mobile */
-        padding-bottom: 5%;  /* Reduce padding for mobile */
+        margin-top: -40px;
     }
 }
 .responsive-full-screen-section a {
