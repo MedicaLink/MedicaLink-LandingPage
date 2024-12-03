@@ -49,10 +49,6 @@
     border-color: #0b7bbe;
 }
 
-html, body {
-    height: 100%; /* Ensure body and html fill the entire screen */
-    margin: 0; /* Remove default margin */
-}
 
 .responsive-full-screen-section {
     display: flex;
