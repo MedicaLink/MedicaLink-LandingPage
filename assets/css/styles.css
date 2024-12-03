@@ -56,8 +56,8 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh; /* Ensure the section takes at least full screen height */
-    padding-top: 5%; /* Add padding above */
-    padding-bottom: 5%; /* Add padding below */
+    padding-top: 0; /* Add padding above */
+    padding-bottom: 0; /* Add padding below */
     background-color: white; /* Plain white background */
     margin-top: 0;
     margin-bottom: 0;
