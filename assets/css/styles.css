@@ -49,6 +49,14 @@
     border-color: #0b7bbe;
 }
 
+{
+    box-sizing: border-box; /* Include padding and border in element's total width/height */
+}
+
+html, body {
+    height: 100%; /* Ensure body and html fill the entire screen */
+    margin: 0; /* Remove default margin */
+}
 
 .responsive-full-screen-section {
     display: flex;
@@ -58,7 +66,7 @@
     min-height: 100vh; /* Ensure the section takes at least full screen height */
     max-height: 100vh;
     padding-top: 0; /* Add padding above */
-    padding-bottom: 0; /* Add padding below */
+    padding-bottom: 7%; /* Add padding below */
     background-color: white; /* Plain white background */
     margin-top: 0;
     margin-bottom: 0;
