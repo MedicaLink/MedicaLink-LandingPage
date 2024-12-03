@@ -66,12 +66,18 @@ html, body {
     min-height: 100vh; /* Ensure the section takes at least full screen height */
     max-height: 100vh;
     padding-top: 0; /* Add padding above */
-    padding-bottom: 7%; /* Add padding below */
+    padding-bottom: 0; /* Add padding below */
     background-color: white; /* Plain white background */
     margin-top: 0;
     margin-bottom: 0;
 }
 
+@media (max-width: 1080px) {
+    .responsive-full-screen-section {
+        padding-top: -2%;  /* Reduce padding for mobile */
+        padding-bottom: 0;  /* Reduce padding for mobile */
+    }
+}
 .responsive-full-screen-section a {
     text-decoration: none; /* Remove underline */
 }
