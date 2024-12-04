@@ -23,8 +23,16 @@
 
 * {
     font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     /* font-family: "Outfit", sans-serif; */
     
+}
+
+html, body {
+    height: 100vh;
+    margin: 0;
 }
 
 
@@ -47,47 +55,4 @@
 .border-medicalink-blue {
     border: 1;
     border-color: #0b7bbe;
-}
-
-
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%; /* Ensure body and html fill the entire screen */
-    margin: 0; /* Remove default margin */
-}
-
-.responsive-full-screen-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: calc(100vh - 100px); /* Ensure the section takes at least full screen height */
-    padding-top: 0; /* Add padding above */
-    padding-bottom: 0; /* Add padding below */
-    background-color: white; /* Plain white background */
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.is-mobile .responsive-full-screen-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: calc(100vh - 140px); /* Ensure the section takes at least full screen height */
-    padding-top: 0; /* Add padding above */
-    padding-bottom: 140px; /* Add padding below */
-    background-color: white; /* Plain white background */
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.responsive-full-screen-section a {
-    text-decoration: none; /* Remove underline */
 }
