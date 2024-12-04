@@ -9,15 +9,16 @@ sideBarCloseButton.addEventListener("click", (e) => {
   document.getElementById("sidebar").classList.add("hidden");
 });
 
-function isMobile() {
-  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-  return /android/i.test(userAgent) || /iPhone|iPad|iPod/i.test(userAgent);
+// Function to update the custom --vh variable
+function setVH() {
+  // Get the viewport height
+  let vh = window.innerHeight * 0.01;
+  // Set the custom CSS variable
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
-if (isMobile()) {
-  // Perform actions for mobile devices
-  document.body.classList.add('is-mobile');
-} else {
-  // Perform actions for non-mobile devices
-  document.body.classList.add('is-desktop');
-}
+// Set the initial value on page load
+setVH();
+
+// Update the value on resize (to account for URL bar changes)
+window.addEventListener('resize', setVH);
