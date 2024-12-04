@@ -1,58 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap'); */
 
 /* Colors */
 :root {
-    --color-default-: ;
-    --color-primary-: #0b7bbe;
-    --color-secondary-: #E1EFF7;
-    --color-tertiary-: #109367;
-    --color-4-: #CAEEEB;
-    --color-5-: #D7B9FF;
-    --color-bg-: #F1E5FF;
-    --color-secondary-bg-: ;
+  --color-default-: ;
+  --color-primary-: #0b7bbe;
+  --color-secondary-: #e1eff7;
+  --color-tertiary-: #109367;
+  --color-4-: #caeeeb;
+  --color-5-: #d7b9ff;
+  --color-bg-: #f1e5ff;
+  --color-secondary-bg-: ;
 }
 /* -------------------------------------------------------------- */
 
- */
-:root {
-    scroll-behavior: smooth;
-  }
+*/ :root {
+  scroll-behavior: smooth;
+}
 
 /* -------------------------------------------------------------- */
 
 * {
-    font-family: "Poppins", sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* font-family: "Outfit", sans-serif; */
-    
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Outfit", sans-serif; */
 }
 
-html, body {
-    height: 100vh;
-    margin: 0;
+html,
+body {
+  height: 100vh;
+  margin: 0;
 }
-
 
 .readmore {
-    color: var(--color-primary-);
+  color: var(--color-primary-);
 }
 
 .text-medicalink-blue {
-    color: #0b7bbe;
-}  
+  color: #0b7bbe;
+}
 
 .bg-medicalink-blue {
-    background: #0b7bbe;
+  background: #0b7bbe;
 }
 
 .bg-mint-green {
-    background: #109367;
+  background: #109367;
 }
 
 .border-medicalink-blue {
-    border: 1;
-    border-color: #0b7bbe;
+  border: 1;
+  border-color: #0b7bbe;
+}
+
+@media (min-width: 0px) {
+  .xs {
+    text-align: center;
+  }
 }
