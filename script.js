@@ -9,38 +9,45 @@
 // // emailjs.send("service_xbpfvvr","template_arhnh7m",parms).then(alert("Message Sent!"))
 // }
 
-<script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-(function(){
-  emailjs.init({
-    publicKey: "bff-gDopmFRJKoeLT",
-  });
-})();
-</script> 
+
 
 function sendMail() {
-    let parms = {
-      name: document.getElementById("name").value,
+    // let parms = {
+    //   name: document.getElementById("name").value,
+    //   email: document.getElementById("email").value,
+    //   phone: document.getElementById("phone").value,
+    //   message: document.getElementById("message").value,
+    // };
+  
+    // // Replace these with your EmailJS service and template IDs
+    // const serviceID = "service_xbpfvvr";
+    // const templateID = "template_arhnh7m";
+  
+    // emailjs.send("service_xbpfvvr", "template_arhnh7m", parms)
+    //   .then(function (response) {
+    //     alert("Message Sent Successfully!");
+    //     console.log("SUCCESS!", response.status, response.text);
+  
+    //     // Optionally clear the form fields after sending
+    //     document.getElementById("contact-form").reset();
+    //   }, function (error) {
+    //     alert("Failed to Send Message. Please try again later.");
+    //     console.error("FAILED...", error);
+    //   });
+
+      var templateParams = {
+        name: document.getElementById("name").value,
       email: document.getElementById("email").value,
       phone: document.getElementById("phone").value,
       message: document.getElementById("message").value,
-    };
-  
-    // Replace these with your EmailJS service and template IDs
-    const serviceID = "service_xbpfvvr";
-    const templateID = "template_arhnh7m";
-  
-    emailjs.send("service_xbpfvvr", "template_arhnh7m", parms)
-      .then(function (response) {
-        alert("Message Sent Successfully!");
-        console.log("SUCCESS!", response.status, response.text);
-  
-        // Optionally clear the form fields after sending
-        document.getElementById("contact-form").reset();
-      }, function (error) {
-        alert("Failed to Send Message. Please try again later.");
-        console.error("FAILED...", error);
-      });
+      };
+      
+      emailjs.send('service_xbpfvvr', 'template_arhnh7m', templateParams).then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+        },
+        (error) => {
+          console.log('FAILED...', error);
+        },
+      );
   }
