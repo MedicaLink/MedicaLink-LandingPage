@@ -1,5 +1,5 @@
 // Initialize EmailJS with your User ID
-emailjs.init('your_user_id'); // Replace 'your_user_id' with your EmailJS User ID
+emailjs.init('osUPKzCryHswJyJSF'); // Replace 'your_user_id' with your EmailJS User ID
 
 // Handle Form Submission
 document.getElementById('contact-form').addEventListener('submit', function (e) {
@@ -12,7 +12,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   const message = document.getElementById('message').value;
 
   // Send email to admin
-  emailjs.send('service_id', 'template_admin', {
+  emailjs.send('service_xbpfvvr', 'template_arhnh7m', {
     from_name: name,
     reply_to: email,
     phone: phone,
@@ -27,7 +27,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
   );
 
   // Send auto-reply to user
-  emailjs.send('service_id', 'template_autoreply', {
+  emailjs.send('service_xbpfvvr', 'template_q5abtbf', {
     to_email: email,
     from_name: name,
   }).then(
