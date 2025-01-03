@@ -5,5 +5,6 @@ let parms = {
     phone : document.getElementById("phone").value,
     message : document.getElementById("message").value,
 }
-emailjs.send("service_xbpfvvr","template_arhnh7m",parms).then(alert("Message Sent!"))
+emailjs.send("service_xbpfvvr","template_arhnh7m");
+// emailjs.send("service_xbpfvvr","template_arhnh7m",parms).then(alert("Message Sent!"))
 }
