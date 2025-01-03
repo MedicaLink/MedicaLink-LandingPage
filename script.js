@@ -9,7 +9,16 @@
 // // emailjs.send("service_xbpfvvr","template_arhnh7m",parms).then(alert("Message Sent!"))
 // }
 
-emailjs.init("YOUR_USER_ID"); // Initialize EmailJS
+<script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init({
+    publicKey: "bff-gDopmFRJKoeLT",
+  });
+})();
+</script> 
 
 function sendMail() {
     let parms = {
