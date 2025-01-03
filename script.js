@@ -9,6 +9,7 @@
 // // emailjs.send("service_xbpfvvr","template_arhnh7m",parms).then(alert("Message Sent!"))
 // }
 
+emailjs.init("YOUR_USER_ID"); // Initialize EmailJS
 
 function sendMail() {
     let parms = {
