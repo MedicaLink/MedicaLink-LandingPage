@@ -22,7 +22,7 @@ function sendMail() {
     const serviceID = "service_xbpfvvr";
     const templateID = "template_arhnh7m";
   
-    emailjs.send(serviceID, templateID, parms)
+    emailjs.send("service_xbpfvvr", "template_arhnh7m", parms)
       .then(function (response) {
         alert("Message Sent Successfully!");
         console.log("SUCCESS!", response.status, response.text);
