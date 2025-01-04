@@ -123,11 +123,11 @@ function sendMail() {
       emailjs.send('service_xbpfvvr', 'template_arhnh7m', templateParams)
       .then(
           (response) => {
-              alert("Success! Your email has been sent.");
+              alert("Success! Your message has been sent.");
               console.log('SUCCESS!', response.status, response.text);
           },
           (error) => {
-              alert("Error! Failed to send your email.");
+              alert("Error! Failed to send your message.");
               console.log('FAILED...', error);
           }
       );
