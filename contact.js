@@ -69,6 +69,9 @@
 // }
 
 function sendMail() { 
+// Prevent page refresh
+event.preventDefault();
+
   // Retrieve input values and trim them
   var nameField = document.getElementById("name");
   var emailField = document.getElementById("email");
