@@ -68,7 +68,7 @@
 //     );
 // }
 
-function sendMail() { 
+function sendMail(event) { 
 // Prevent page refresh
 event.preventDefault();
 
