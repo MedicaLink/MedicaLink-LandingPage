@@ -47,7 +47,11 @@ body {
 }
 
 .bg-mint-green {
-  background: #109367;
+  background: #37a468;
+}
+
+.bg-secondary-blue {
+  background: #215893;
 }
 
 .border-medicalink-blue {
