@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+      rel="icon"
+      type="image/png"
+      href="/assets/icons/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="/assets/icons/favicon/favicon.svg"
+    />
+    <link rel="shortcut icon" href="/assets/icons/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/icons/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/assets/icons/favicon/site.webmanifest" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <title>MedicaLink - Digital Health Redifined</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="absolute inset-x-0 top-0 z-50 sticky bg-white">
+      <!-- Navigation -->
+      <nav
+        class="flex items-center justify-between p-6 lg:px-8"
+        aria-label="Global"
+      >
+        <div class="flex lg:flex-1">
+          <a href="/" class="-m-1.5 p-1.5">
+            <span class="sr-only">MedicaLink</span>
+            <img
+              class="h-10 w-auto"
+              src="./assets/icons/main-logo-header.png"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="flex lg:hidden md:hidden">
+          <button
+            type="button"
+            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            id="menu-btn"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:flex lg:gap-x-12">
+          <!-- <a href="/" class="text-sm font-semibold leading-6 text-gray-900"
+            >Home</a
+          > -->
+          <a href="/emr" class="text-sm font-semibold leading-6 text-gray-900"
+            >EMR</a
+          >
+          <a
+            href="/research"
+            class="text-sm font-semibold leading-6 text-gray-900"
+            >Research</a
+          >
+          <a
+            href="/services"
+            class="text-sm font-semibold leading-6 text-gray-900"
+            >Services</a
+          >
+          <a href="/store" class="text-sm font-semibold leading-6 text-gray-900"
+            >Store</a
+          >
+          <a href="/about" class="text-sm font-semibold leading-6 text-gray-900"
+            >About Us</a
+          >
+        </div>
+        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+          <a href="/contact" class="text-sm/6 font-semibold text-gray-900"
+            >Contact Us</a
+          >
+        </div>
+      </nav>
+
+      <!-- Mobile menu, show/hide based on menu open state. -->
+      <div class="hidden" role="dialog" aria-modal="true" id="sidebar">
+        <div
+          class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+        >
+          <div class="flex items-center justify-between">
+            <a href="/index" class="-m-1.5 p-1.5">
+              <span class="sr-only">MedicaLink</span>
+              <img
+                class="h-10 w-auto"
+                src="./assets/icons/main-logo-header.png"
+                alt=""
+              />
+            </a>
+            <button
+              type="button"
+              class="-m-2.5 rounded-md p-2.5 text-gray-700"
+              id="close-btn"
+            >
+              <span class="sr-only">Close menu</span>
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-gray-500/10">
+              <div class="space-y-2 py-6">
+                <a
+                  href="/"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Home</a
+                >
+                <a
+                  href="/emr"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >EMR</a
+                >
+                <a
+                  href="/research"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Research</a
+                >
+                <a
+                  href="/services"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Services</a
+                >
+                <a
+                  href="/store"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >Store</a
+                >
+                <a
+                  href="/about"
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >About Us</a
+                >
+              </div>
+              <div class="py-6">
+                <a
+                  href="/contact"
+                  class="-mx-3 block rounded-lg px-3 py-2.5 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                  >Contact Us</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- terms and conditions -->
+<section
+class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-2xl xl:gap-16 md:grid md:grid-cols-1 sm:py-16 lg:px-6"
+>
+<div class="py-8 px-4 max-w-screen-xl mx-auto sm:py-16 lg:px-6">
+  <div class="mx-auto text-center">
+    <h2 class="mb-4 text-4xl tracking-tight font-bold text-gray-900">
+      Terms and Conditions
+    </h2>
+    <p class="mb-8 font-regular leading-8 text-gray-700 text-lg">
+      At Medicalink, we aim to provide a secure and trustworthy platform for managing your medical records. Please read these Terms and Conditions carefully before using the app.
+    </p>
+    <p class="mb-8 font-regular leading-8 text-gray-700 text-base">
+      By using Medicalink, you agree to comply with and be bound by these terms. If you do not agree with any part of these terms, please refrain from using the app.
+    </p>
+    
+    <!-- Terms and Conditions Content Container -->
+    <div class="max-w-4xl mx-auto text-left space-y-6 text-sm text-gray-700">
+      <!-- Introduction Section -->
+      <div>
+        <h3 class="text-lg text-gray-900">1. Introduction</h3>
+        <p>
+          Welcome to Medicalink. By using our app, you agree to the following Terms and Conditions. These terms outline the rules for using the app, and by accessing and using the platform, you agree to abide by them.
+        </p>
+      </div>
+
+      <!-- User Obligations -->
+      <div>
+        <h3 class="text-lg text-gray-900">2. User Obligations</h3>
+        <p>
+          As a user of Medicalink, you agree to provide accurate and truthful information during the registration and usage of the app. You must not misuse the platform for any unlawful or malicious purposes, including but not limited to:
+        </p>
+        <ul class="list-inside list-disc">
+          <li>Providing false or misleading information.</li>
+          <li>Engaging in activities that harm the integrity of the app.</li>
+          <li>Attempting to interfere with or harm the platform or its services.</li>
+        </ul>
+      </div>
+
+      <!-- Account Management -->
+      <div>
+        <h3 class="text-lg text-gray-900">3. Account Management</h3>
+        <p>
+          Users are responsible for creating and maintaining their accounts, ensuring their account details remain accurate and up-to-date. You are also responsible for keeping your account credentials secure and confidential. If you suspect any unauthorized activity on your account, you must notify us immediately.
+        </p>
+      </div>
+
+      <!-- Usage Restrictions -->
+      <div>
+        <h3 class="text-lg text-gray-900">4. Usage Restrictions</h3>
+        <p>
+          You may not copy, reproduce, distribute, or exploit any content or features of the app for any commercial purposes. Unauthorized copying or redistribution of the content provided on the platform is prohibited.
+        </p>
+      </div>
+
+      <!-- Termination -->
+      <div>
+        <h3 class="text-lg text-gray-900">5. Termination</h3>
+        <p>
+          Medicalink reserves the right to suspend or terminate a user's access to the platform in the event of a breach of these Terms and Conditions, including providing false information or misusing the app. Termination may be temporary or permanent, at the discretion of Medicalink.
+        </p>
+      </div>
+
+      <!-- Limitation of Liability -->
+      <div>
+        <h3 class="text-lg text-gray-900">6. Limitation of Liability</h3>
+        <p>
+          Medicalink is not liable for any indirect, incidental, or consequential damages arising from your use of the app. We do not guarantee uninterrupted or error-free service, and while we take security seriously, no system is entirely risk-free.
+        </p>
+      </div>
+
+      <!-- Governing Law -->
+      <div>
+        <h3 class="text-lg text-gray-900">7. Governing Law</h3>
+        <p>
+          These Terms and Conditions are governed by Sri Lankan law. Any disputes arising out of or in connection with the app will be subject to the exclusive jurisdiction of the courts in Sri Lanka.
+        </p>
+      </div>
+
+      <!-- Changes to Terms -->
+      <div>
+        <h3 class="text-lg text-gray-900">8. Changes to Terms</h3>
+        <p>
+          Medicalink reserves the right to update or modify these Terms and Conditions at any time. We will provide at least two weeks’ notice of any significant changes. You will be notified through a suitable means, such as an in-app notification or email. Continued use of the app after changes are made constitutes your acceptance of the updated terms.
+        </p>
+      </div>
+
+      <!-- Contact Information -->
+      <div>
+        <h3 class="text-lg text-gray-900">9. Contact Information</h3>
+        <p>
+          If you have any questions about these Terms and Conditions or any other concerns regarding your use of Medicalink, contact us <a href="/contact" class="text-blue-600 hover:underline">here</a>.
+        </p>
+      </div>
+    </div>
+    <!-- End of Terms and Conditions Content -->
+    
+  </div>
+</div>
+</section>
+
+
+
+
+
+    
+
+    <!-- Footer -->
+
+    <footer class="bg-medicalink-blue">
+      <div class="w-full mx-auto p-8 md:py-8">
+        <div class="sm:flex items-center mx-auto text-center">
+          <ul
+            class="sm:flex sm:text-center items-center mx-auto text-sm font-medium text-white sm:mb-0 gap-6"
+          >
+            <li class="mb-6">
+              <a href="/t-&-c" class="hover:underline">T & C</a>
+            </li>
+            <li class="mb-6">
+              <a href="/privacy-notice" class="hover:underline"
+                >Privacy Notice</a
+              >
+            </li>
+            <li class="mb-6">
+              <a href="/support" class="hover:underline">Support</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex items-center mx-auto text-center">
+          <ul
+            class="flex flex-row text-center items-center mx-auto text-sm font-medium text-white gap-4 mb-6"
+          >
+            <li>
+              <a href="#"
+                ><img
+                  src="./assets/icons/facebook.png"
+                  width="20px"
+                  height="auto"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./assets/icons/twitter.png"
+                  width="20px"
+                  height="auto"
+              /></a>
+            </li>
+            <li>
+              <a
+                href="https://www.instagram.com/medicalink.lk?igsh=MXIwYnk4MzRhM2E3YQ=="
+                ><img
+                  src="./assets/icons/instagram.png"
+                  width="20px"
+                  height="auto"
+              /></a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/medicalinklanka"
+                ><img
+                  src="./assets/icons/linkedin.png"
+                  width="20px"
+                  height="auto"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="./assets/icons/youtube.png"
+                  width="20px"
+                  height="auto"
+              /></a>
+            </li>
+          </ul>
+        </div>
+        <hr class="my-6 border-white sm:mx-auto lg:my-8" />
+        <span class="block text-sm text-white text-center"
+          >© 2025
+          <a href="https://medicalink.lk/" class="hover:underline">MedicaLink</a
+          >. All Rights Reserved.</span
+        >
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/main.js"></script>
+   
+  </body>
+</html>
