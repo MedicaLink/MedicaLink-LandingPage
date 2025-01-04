@@ -80,24 +80,32 @@
 //   }
 // }
 
-function sendMail(event) { 
-  // Prevent page refresh
-  event.preventDefault();
-  
+let canSubmit = true; // Flag to prevent multiple submissions
+
+function sendMail(event) {  
+    // Prevent page refresh
+    event.preventDefault();
+
+    // Prevent form submission if it's within the 60 seconds wait period
+    if (!canSubmit) {
+        alert("Please wait 60 seconds before sending another message.");
+        return;
+    }
+
     // Retrieve input values and trim them
     var nameField = document.getElementById("name");
     var emailField = document.getElementById("email");
     var phoneField = document.getElementById("phone");
     var messageField = document.getElementById("message");
-  
+
     var name = nameField.value.trim();
     var email = emailField.value.trim();
     var phone = phoneField.value.trim();
     var message = messageField.value.trim();
-  
+
     // Initialize validation flag
     var isValid = true;
-  
+
     // Validation: Check if all fields are filled
     if (!name) {
         alert("Please enter your name.");
@@ -119,7 +127,7 @@ function sendMail(event) {
         messageField.value = ""; // Clear the message field
         isValid = false;
     }
-  
+
     // Email Validation
     var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
@@ -127,7 +135,7 @@ function sendMail(event) {
         emailField.value = ""; // Clear the email field
         isValid = false;
     }
-  
+
     // Phone Validation: Must start with 0 and have exactly 10 digits
     var phoneRegex = /^0\d{9}$/;
     if (!phoneRegex.test(phone)) {
@@ -135,7 +143,7 @@ function sendMail(event) {
         phoneField.value = ""; // Clear the phone field
         isValid = false;
     }
-  
+
     // Only proceed if all validations pass
     if (isValid) {
         var templateParams = {
@@ -144,13 +152,26 @@ function sendMail(event) {
             phone: phone,
             message: message,
         };
-  
+
         // Send email using emailjs
         emailjs.send('service_xbpfvvr', 'template_arhnh7m', templateParams)
         .then(
             (response) => {
                 alert("Message sent successfully!");
+
+                // Clear the form fields after success
+                nameField.value = "";
+                emailField.value = "";
+                phoneField.value = "";
+                messageField.value = "";
+
                 console.log('SUCCESS!', response.status, response.text);
+
+                // Disable the submit button for 60 seconds
+                canSubmit = false;
+                setTimeout(() => {
+                    canSubmit = true;
+                }, 60000); // 60 seconds
             },
             (error) => {
                 alert("Please try again later.");
@@ -160,4 +181,4 @@ function sendMail(event) {
     } else {
         console.log("Form submission halted due to validation errors.");
     }
-  }
+}
