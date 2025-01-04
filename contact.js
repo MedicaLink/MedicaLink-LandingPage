@@ -70,10 +70,15 @@
 
 function sendMail() { 
   // Retrieve input values and trim them
-  var name = document.getElementById("name").value.trim();
-  var email = document.getElementById("email").value.trim();
-  var phone = document.getElementById("phone").value.trim();
-  var message = document.getElementById("message").value.trim();
+  var nameField = document.getElementById("name");
+  var emailField = document.getElementById("email");
+  var phoneField = document.getElementById("phone");
+  var messageField = document.getElementById("message");
+
+  var name = nameField.value.trim();
+  var email = emailField.value.trim();
+  var phone = phoneField.value.trim();
+  var message = messageField.value.trim();
 
   // Initialize validation flag
   var isValid = true;
@@ -81,33 +86,39 @@ function sendMail() {
   // Validation: Check if all fields are filled
   if (!name) {
       alert("Please enter your name.");
-      isValid = false; // Mark as invalid
+      nameField.value = ""; // Clear the name field
+      isValid = false;
   }
   if (!email) {
       alert("Please enter your email.");
-      isValid = false; // Mark as invalid
+      emailField.value = ""; // Clear the email field
+      isValid = false;
   }
   if (!phone) {
       alert("Please enter your phone number.");
-      isValid = false; // Mark as invalid
+      phoneField.value = ""; // Clear the phone field
+      isValid = false;
   }
   if (!message) {
       alert("Please enter your message.");
-      isValid = false; // Mark as invalid
+      messageField.value = ""; // Clear the message field
+      isValid = false;
   }
 
   // Email Validation
   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
       alert("Please enter a valid email address.");
-      isValid = false; // Mark as invalid
+      emailField.value = ""; // Clear the email field
+      isValid = false;
   }
 
   // Phone Validation: Must start with 0 and have exactly 10 digits
   var phoneRegex = /^0\d{9}$/;
   if (!phoneRegex.test(phone)) {
       alert("Please enter a valid phone number (starting with 0 and followed by 9 digits).");
-      isValid = false; // Mark as invalid
+      phoneField.value = ""; // Clear the phone field
+      isValid = false;
   }
 
   // Only proceed if all validations pass
@@ -123,11 +134,11 @@ function sendMail() {
       emailjs.send('service_xbpfvvr', 'template_arhnh7m', templateParams)
       .then(
           (response) => {
-              alert("Success! Your message has been sent.");
+              alert("Success! We will get back to you shortly.");
               console.log('SUCCESS!', response.status, response.text);
           },
           (error) => {
-              alert("Error! Failed to send your message.");
+              alert("Error! Please try again later.");
               console.log('FAILED...', error);
           }
       );
