@@ -33,8 +33,7 @@ body, html {
   height: 100%; /* Ensure body and html take full viewport height */
   margin: 0;    /* Remove default margin */
   padding: 0;   /* Remove default padding */
-  /* overflow-x: hidden; */
-}
+  }
 
 
 .main-content {
@@ -86,26 +85,3 @@ body, html {
   }
 }
 
-header {
-  position: -webkit-sticky; /* Safari support */
-  position: sticky;
-  top: 0;
-  z-index: 50; /* Ensure navbar is above other content */
-  width: 100%;
-}
-
-/* When the sidebar is shown */
-#sidebar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 999; /* Ensure the sidebar is on top of other content */
-  width: 100%; /* Full width for the sidebar */
-  height: 100%; /* Full height for the sidebar */
-  transition: transform 0.3s ease-in-out; /* Smooth opening transition */
-}
-
-/* When the sidebar is hidden */
-#sidebar.hidden {
-  transform: translateX(100%); /* Move the sidebar off-screen when hidden */
-}
