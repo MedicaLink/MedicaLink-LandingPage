@@ -143,31 +143,17 @@ header {
   z-index: 50;
 }
 
-/* For WebKit Browsers (Chrome, Edge, Safari) */
+/* Target the sidebar specifically */
 #sidebar::-webkit-scrollbar {
-  width: 8px; /* Width of the scrollbar */
-}
-
-#sidebar::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Track color */
+  width: 8px; /* Width of the vertical scrollbar */
+  height: 8px; /* Height of the horizontal scrollbar */
 }
 
 #sidebar::-webkit-scrollbar-thumb {
-  background: #888; /* Thumb color */
-  border-radius: 0; /* Make it square */
+  cursor: pointer; /* Makes the thumb interactive */
+  background: #0b7bbe; /* Custom color for the scrollbar thumb */
 }
 
-#sidebar::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Thumb color on hover */
-}
-
-/* For Firefox */
-#sidebar {
-  scrollbar-width: thin; /* Makes it smaller */
-  scrollbar-color: #888 #f1f1f1; /* Thumb color | Track color */
-}
-
-/* Hide Arrows (on overflow) */
-#sidebar::-webkit-scrollbar-button {
-  display: none;
+#sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Optional: Track background color */
 }
