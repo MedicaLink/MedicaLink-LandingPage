@@ -131,7 +131,7 @@ h2 span {
 .blink {
   display: inline-block;  /* Ensure it stays on the same line */
   animation: blink 0.8s steps(1) infinite;
-  animation-delay: 0s;  /* Adjust delay as needed */
+  animation-delay: 0.15s;  /* Adjust delay as needed */
   animation-iteration-count: 3; /* Blink 3 times */
 }
 
