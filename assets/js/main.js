@@ -10,4 +10,3 @@ sideBarCloseButton.addEventListener("click", (e) => {
 });
 
 
-
