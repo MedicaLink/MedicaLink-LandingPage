@@ -100,7 +100,7 @@ body, html {
 }
 
 .medicalink {
-  animation: typing 1.2s steps(84) 2.6s forwards; 
+  animation: typing 1.2s steps(84) 2.4s forwards; 
 }
 
 
@@ -143,15 +143,15 @@ h2 span {
 }
 
 .blink-1 {
-  animation-delay: 0.2s; /* Starts immediately */
+  animation-delay: 0.3s; /* Starts immediately */
 }
 
 .blink-2 {
-  animation-delay: 0.8s; /* Starts after blink-1 */
+  animation-delay: 0.9s; /* Starts after blink-1 */
 }
 
 .blink-3 {
-  animation-delay: 1.4s; /* Starts after blink-2 */
+  animation-delay: 1.5s; /* Starts after blink-2 */
 }
 
 
