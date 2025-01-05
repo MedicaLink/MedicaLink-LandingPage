@@ -86,6 +86,8 @@ body, html {
 }
 
 
+
+  /* Typewriter text animation */
 .typewriter-text {
   display: inline-block;
   overflow: hidden;
@@ -94,15 +96,20 @@ body, html {
 }
 
 .introducing {
-  animation: typing 5s steps(100) 1.5s forwards;
+  animation: typing 6s steps(200) forwards;
 }
 
 .medicalink {
-  animation: typing 5.5s steps(120) 2.2s forwards; /* Delayed by 2 seconds */
+  animation: typing 6.6s steps(200) 1.2s forwards; 
 }
 
-.paragraph-text {
-  animation: typing 7s steps(400) 3.7s forwards; /* Adjust steps and delay for the paragraph */
+@media (max-width: 768px) {
+   .introducing {
+    animation: typing 1.8s steps(200) linear forwards; /* Same timing as desktop */
+  }
+  .medicalink {
+    animation: typing 2s steps(200) linear 1s forwards; /* Same delay */
+  }
 }
 
 @keyframes typing {
@@ -110,7 +117,12 @@ body, html {
     width: 0;
   }
   to {
-    width: 100%; /* Adjust to the length of the text */
+    width: 100%;
   }
 }
 
+h2 span {
+  display: block; /* Force each text to appear on its line */
+  margin-bottom: 0.5rem; /* Adjust vertical spacing */
+  line-height: 1.3; /* Make sure there's enough space */
+}
