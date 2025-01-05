@@ -116,5 +116,5 @@ body, html {
 h2 span {
   display: block; /* Force each text to appear on its line */
   margin-bottom: 0.5rem; /* Adjust vertical spacing */
-  line-height: 1.3; /* Make sure there's enough space */
+  line-height: 1.25; /* Make sure there's enough space */
 }
