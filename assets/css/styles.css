@@ -118,3 +118,18 @@ h2 span {
   margin-bottom: 0.5rem; /* Adjust vertical spacing */
   line-height: 1.25; /* Make sure there's enough space */
 }
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink {
+  animation: blink 1s steps(1) infinite;
+  animation-delay: 5s;  /* Adjust the delay to sync with the typewriter */
+  animation-iteration-count: 3; /* Blink three times */
+}
