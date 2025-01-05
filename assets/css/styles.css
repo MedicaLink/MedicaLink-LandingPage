@@ -100,7 +100,7 @@ body, html {
 }
 
 .medicalink {
-  animation: typing 1.2s steps(84) 0.9s forwards; 
+  animation: typing 1.2s steps(84) 2.8s forwards; 
 }
 
 
@@ -129,7 +129,9 @@ h2 span {
 }
 
 .blink {
-  animation: blink 1s steps(1) infinite;
-  animation-delay: 5s;  /* Adjust the delay to sync with the typewriter */
-  animation-iteration-count: 3; /* Blink three times */
+  display: inline-block;  /* Ensure it stays on the same line */
+  animation: blink 0.8s steps(1) infinite;
+  animation-delay: 0.15s;  /* Adjust delay as needed */
+  animation-iteration-count: 3; /* Blink 3 times */
 }
+
