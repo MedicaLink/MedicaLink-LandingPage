@@ -77,3 +77,9 @@ body {
   }
 }
 
+.sticky-nav {
+  position: sticky;
+  top: 0; /* This will make it stick at the top of the viewport */
+  z-index: 1000; /* Ensures it's above other elements */
+  width: 100%;
+}
