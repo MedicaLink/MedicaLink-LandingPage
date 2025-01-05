@@ -28,14 +28,18 @@
   /* font-family: "Outfit", sans-serif; */
 }
 
+
 body, html {
-  height: 100%; /* Make sure the body takes up the full height */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  margin: 0;
+  height: 100%; /* Ensure body and html take full viewport height */
+  margin: 0;    /* Remove default margin */
+  padding: 0;   /* Remove default padding */
+  /* overflow-x: hidden; */
 }
+
 
 .main-content {
   min-height: 100vh; /* Ensure the content takes up at least the full screen height */
+  padding-top: 60px;
 }
 
 
