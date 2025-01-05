@@ -85,3 +85,31 @@ body, html {
   }
 }
 
+
+.typewriter-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+}
+
+.introducing {
+  animation: typing 5s steps(100) 1.5s forwards;
+}
+
+.medicalink {
+  animation: typing 5.5s steps(120) 2.2s forwards; /* Delayed by 2 seconds */
+}
+
+.paragraph-text {
+  animation: typing 7s steps(400) 3.7s forwards; /* Adjust steps and delay for the paragraph */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; /* Adjust to the length of the text */
+  }
+}
