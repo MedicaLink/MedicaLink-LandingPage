@@ -143,17 +143,3 @@ header {
   z-index: 50;
 }
 
-/* Target the sidebar specifically */
-#sidebar::-webkit-scrollbar {
-  width: 8px; /* Width of the vertical scrollbar */
-  height: 8px; /* Height of the horizontal scrollbar */
-}
-
-#sidebar::-webkit-scrollbar-thumb {
-  cursor: pointer; /* Makes the thumb interactive */
-  background: #0b7bbe; /* Custom color for the scrollbar thumb */
-}
-
-#sidebar::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Optional: Track background color */
-}
