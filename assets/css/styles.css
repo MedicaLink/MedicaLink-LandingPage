@@ -64,3 +64,13 @@ body {
     text-align: center;
   }
 }
+
+@media (max-width: 768px) {
+  #index .max-w-full img {
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
