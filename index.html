@@ -249,7 +249,7 @@
   
   
   
-  <div class="bg-white px-6 py-12">
+  <!-- <div class="bg-white px-6 py-12">
     <div class="lg:max-w-7xl max-w-lg mx-auto px-6 py-8 bg-white rounded-lg shadow-md">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div class="max-w-full">
@@ -269,11 +269,10 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   
   
-  
-  <div class="bg-white px-6 py-12">
+  <!-- <div class="bg-white px-6 py-12">
     <div class="lg:max-w-7xl max-w-lg mx-auto px-6 py-8 bg-white rounded-lg shadow-md">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div class="lg:order-first">
@@ -293,10 +292,35 @@
         </div>
       </div>
     </div>
+  </div> -->
+  
+  <div class="bg-white px-6 py-12">
+    <div class="lg:max-w-7xl max-w-lg mx-auto px-6 py-8 bg-white rounded-lg shadow-md">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <!-- First Column: Content with AOS Animation -->
+        <div class="lg:order-first" data-aos="fade-up" data-aos-duration="1000">
+          <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">Unlock the Potential of Anonymized Data</h2>
+          <ul class="text-base text-center text-gray-700 space-y-2 pl-4 mt-6">
+            <li>✔ Contribute anonymized data to advance healthcare</li>
+            <li>✔ Support research to improve healthcare outcomes</li>
+            <li>✔ Enable data-driven decisions for a healthier future</li>
+            <li>✔ Help shape a better healthcare system for all</li>
+          </ul>
+          <div class="mt-6 text-center ml-4">
+            <a href="/research" class="text-medicalink-blue text-base font-semibold hover:text-gray-700">Contribute to Research</a>
+          </div>
+        </div>
+  
+        <!-- Second Column: Image with AOS Animation -->
+        <div class="max-w-full order-first lg:order-last" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+          <img src="assets/images/research.png" alt="Image" class="rounded-md object-cover w-full h-auto lg:max-h-[350px] lg:w-auto" />
+        </div>
+      </div>
+    </div>
   </div>
   
     
-  <div class="bg-white px-6 py-12">
+  <!-- <div class="bg-white px-6 py-12">
     <div class="lg:max-w-7xl max-w-lg mx-auto px-6 py-8 bg-white rounded-lg shadow-md">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div class="max-w-full">
@@ -304,12 +328,31 @@
         </div>
         <div>
           <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">Customized Solutions for Your Clinic’s Needs</h2>
-          <!-- <ul class="list-disc text-base text-gray-700 space-y-2 pl-4 mt-6">
-            <li>Customized EMR solutions for your clinic</li>
-            <li>Seamless digital healthcare implementation</li>
-            <li>Training for smooth system adoption</li>
-            <li>Enhanced clinic efficiency and operations</li>
-          </ul> -->
+          <ul class="text-base text-center text-gray-700 space-y-2 pl-4 mt-6">
+            <li>✔ Customized EMR solutions for your clinic</li>
+            <li>✔ Seamless digital healthcare implementation</li>
+            <li>✔ Training for smooth system adoption</li>
+            <li>✔ Enhanced clinic efficiency and operations</li>
+          </ul>
+          <div class="mt-6 text-center">
+            <a href="/services" class="text-medicalink-blue text-base font-semibold hover:text-gray-700">Explore Our Services</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  
+  <div class="bg-white px-6 py-12">
+    <div class="lg:max-w-7xl max-w-lg mx-auto px-6 py-8 bg-white rounded-lg shadow-md">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <!-- First Column: Image with AOS Animation -->
+        <div class="max-w-full" data-aos="fade-up" data-aos-duration="1000">
+          <img src="assets/images/services.png" alt="Image" class="rounded-md object-cover w-full h-auto lg:max-h-[350px] lg:w-auto" />
+        </div>
+  
+        <!-- Second Column: Content with AOS Animation -->
+        <div data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+          <h2 class="text-3xl font-bold text-center text-gray-900 mb-4">Customized Solutions for Your Clinic’s Needs</h2>
           <ul class="text-base text-center text-gray-700 space-y-2 pl-4 mt-6">
             <li>✔ Customized EMR solutions for your clinic</li>
             <li>✔ Seamless digital healthcare implementation</li>
@@ -410,10 +453,15 @@
       crossorigin="anonymous"
     ></script>
     <script src="./assets/js/main.js"></script>
-    <script>
-      // Initialize AOS
-      AOS.init();
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- Initialize AOS -->
+  <script>
+    AOS.init({
+      startEvent: 'load',  // Ensure animations trigger on page load
+      once: true,          // Only trigger animations once
+    });
+  </script>
     
   </body>
 </html>
