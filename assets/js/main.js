@@ -10,3 +10,7 @@ sideBarCloseButton.addEventListener("click", (e) => {
 });
 
 
+AOS.init({
+  startEvent: 'load', // Ensure animations trigger on page load
+  once: true, // Only trigger animations once
+});
