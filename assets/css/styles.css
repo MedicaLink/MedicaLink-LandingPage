@@ -143,15 +143,15 @@ h2 span {
 }
 
 .blink-1 {
-  animation-delay: 3.6s; /* Starts immediately */
+  animation-delay: 0.8s; /* Starts immediately */
 }
 
 .blink-2 {
-  animation-delay: 4.2s; /* Starts after blink-1 */
+  animation-delay: 1.6s; /* Starts after blink-1 */
 }
 
 .blink-3 {
-  animation-delay: 4.8s; /* Starts after blink-2 */
+  animation-delay: 2.4s; /* Starts after blink-2 */
 }
 
 
