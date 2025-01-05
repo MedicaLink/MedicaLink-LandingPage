@@ -119,21 +119,41 @@ h2 span {
   line-height: 1; /* Make sure there's enough space */
 }
 
+
 @keyframes blink {
-  0%, 100% {
-    opacity: 1;
+  0% {
+    opacity: 0;
   }
   50% {
-    opacity: 0;
+    opacity: 1;
+  }
+  100% {
+    opacity: 1; /* Stay visible at the end */
   }
 }
 
-.blink {
-  display: inline-block;  /* Ensure it stays on the same line */
-  animation: blink 0.8s steps(1) infinite;
-  animation-delay: 0.15s;  /* Adjust delay as needed */
-  animation-iteration-count: 3; /* Blink 3 times */
+.blink-1,
+.blink-2,
+.blink-3 {
+  display: inline-block; /* Keeps the dots on the same line */
+  animation: blink 0.8s steps(1);
+  animation-fill-mode: forwards; /* Ensures the final state is retained */
+  animation-iteration-count: 1; /* Blink only once */
+  opacity: 0; /* Initially hidden */
 }
+
+.blink-1 {
+  animation-delay: 0.2s; /* Starts immediately */
+}
+
+.blink-2 {
+  animation-delay: 1s; /* Starts after blink-1 */
+}
+
+.blink-3 {
+  animation-delay: 1.8s; /* Starts after blink-2 */
+}
+
 
 header {
   position: fixed;
