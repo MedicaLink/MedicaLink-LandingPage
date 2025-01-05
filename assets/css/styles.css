@@ -103,14 +103,6 @@ body, html {
   animation: typing 2s steps(200) 1s forwards; 
 }
 
-@media (max-width: 768px) {
-   .introducing {
-    animation: typing 1.8s steps(200) linear forwards; /* Same timing as desktop */
-  }
-  .medicalink {
-    animation: typing 2s steps(200) linear 1s forwards; /* Same delay */
-  }
-}
 
 @keyframes typing {
   from {
