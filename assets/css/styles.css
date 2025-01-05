@@ -136,7 +136,7 @@ h2 span {
 .blink-2,
 .blink-3 {
   display: inline-block; /* Keeps the dots on the same line */
-  animation: blink 0.6s steps(1);
+  animation: blink 0.65s steps(1);
   animation-fill-mode: forwards; /* Ensures the final state is retained */
   animation-iteration-count: 1; /* Blink only once */
   opacity: 0; /* Initially hidden */
@@ -147,11 +147,11 @@ h2 span {
 }
 
 .blink-2 {
-  animation-delay: 1.2s; /* Starts after blink-1 */
+  animation-delay: 1.25s; /* Starts after blink-1 */
 }
 
 .blink-3 {
-  animation-delay: 1.8s; /* Starts after blink-2 */
+  animation-delay: 1.9s; /* Starts after blink-2 */
 }
 
 
