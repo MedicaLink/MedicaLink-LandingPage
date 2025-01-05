@@ -96,11 +96,11 @@ body, html {
 }
 
 .introducing {
-  animation: typing 6s steps(200) forwards;
+  animation: typing 1.8s steps(200) forwards;
 }
 
 .medicalink {
-  animation: typing 6.6s steps(200) 1.2s forwards; 
+  animation: typing 2s steps(200) 1s forwards; 
 }
 
 @media (max-width: 768px) {
