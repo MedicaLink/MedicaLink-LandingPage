@@ -6,7 +6,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- <style>
       body, html {
-        overflow-x: hidden;
+        overflow: auto;
       }
     </style> -->
 
@@ -241,6 +241,7 @@
           <img
             src="assets/icons/mockup-4.png"
             alt="Image"
+            style="width: 90%"
             class="-mt-14 -mb-20 rounded-md object-cover w-full h-auto lg:max-h-[350px] lg:w-auto"
           />
         </div>
@@ -278,12 +279,12 @@
     <div class="lg:max-w-7xl max-w-lg mx-auto px-1 py-8 bg-white shadow-sm rounded-sm">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <!-- First Column: Image with AOS Animation -->
-        <div class="max-w-full" >
-          <img src="assets/images/emr.png" alt="Image" class="rounded-md object-cover w-full h-auto lg:max-h-[350px] lg:w-auto" />
+        <div class="flex justify-center items-center max-w-full order-first lg:order-last" >
+          <img src="assets/images/emr.png" style="width: 40%" alt="Image" class="rounded-md object-cover w-full h-auto lg:max-h-[350px] lg:w-auto" />
         </div>
   
         <!-- Second Column: Content with AOS Animation -->
-        <div >
+        <div class="lg:order-first">
           <h2 class="text-2xl font-bold text-center text-gray-900 mb-4">Connecting Healthcare<br>with Modern Solutions</h2>
           <ul class="text-center text-sm text-gray-700 space-y-2 pl-4 mt-6">
             <li>✔ Centralized, secure, and easy to use platform</li>
@@ -306,7 +307,7 @@
     <div class="lg:max-w-7xl max-w-lg mx-auto px-1 py-8 bg-white shadow-sm rounded-sm">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <!-- First Column: Content with AOS Animation -->
-        <div class="lg:order-first">
+        <div class="lg:order-last">
           <h2 class="text-2xl font-bold text-center text-gray-900 mb-4">Unlock the Potential of<br>Anonymized Data</h2>
           <ul class="text-sm text-center text-gray-700 space-y-2 pl-4 mt-6">
             <li>✔ Contribute anonymized data to advance healthcare</li>
@@ -323,8 +324,8 @@
         </div>
   
         <!-- Second Column: Image with AOS Animation -->
-        <div class="max-w-full order-first lg:order-last">
-          <img src="assets/images/research.png" alt="Image" class="rounded-md object-cover w-full h-auto lg:max-h-[350px] lg:w-auto" />
+        <div class="flex justify-center items-center max-w-full order-first lg:order-first">
+          <img src="assets/images/research.png" style="width: 40%" alt="Image" class="rounded-md object-cover w-full h-auto lg:max-h-[350px] lg:w-auto" />
         </div>
       </div>
     </div>
@@ -335,12 +336,12 @@
     <div class="lg:max-w-7xl max-w-lg mx-auto px-1 py-8 bg-white shadow-sm rounded-sm">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <!-- First Column: Image with AOS Animation -->
-        <div id="image-3" class="max-w-full">
-          <img src="assets/images/services.png" alt="Image" class="rounded-md object-cover w-full h-auto lg:max-h-[350px] lg:w-auto" />
+        <div class="flex justify-center items-center max-w-full order-first lg:order-last">
+          <img src="assets/images/services.png" style="width: 40%" alt="Image" class="rounded-md object-cover w-full h-auto lg:max-h-[350px] lg:w-auto" />
         </div>
   
         <!-- Second Column: Content with AOS Animation -->
-        <div>
+        <div class="lg:order-first">
           <h2 class="text-2xl font-bold text-center text-gray-900 mb-4">Customized Solutions for<br>Your Clinic’s Needs</h2>
           <ul class="text-sm text-center text-gray-700 space-y-2 pl-4 mt-6">
             <li>✔ Customized EMR solutions for your clinic</li>
@@ -454,10 +455,11 @@
     
     <script> 
     AOS.init({
-      startEvent: 'load',  // Ensure animations trigger on page load
+      startEvent: 'load', 
+      offset: 300, // Ensure animations trigger on page load
       once: true,          // Only trigger animations once
     });
-    </script>
+        </script>
    
 
   </body>
