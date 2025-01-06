@@ -186,3 +186,6 @@ header {
   animation: fadeIn 1s ease-out forwards;
 }
 
+a * {
+  pointer-events: auto !important;
+}
