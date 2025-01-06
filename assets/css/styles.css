@@ -77,14 +77,22 @@ body, html {
 }
 
 @media (max-width: 768px) {
-  #index .max-w-full img {
-    width: 40%;
+  #image-resize .max-w-full img {
+    width: 50%;
     height: auto;
     margin: 0 auto;
     display: block;
   }
 }
 
+@media (max-width: 768px) {
+  #image-1 #image-2 #image-3 .max-w-full img {
+    width: 40%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+}
 
 
   /* Typewriter text animation */
