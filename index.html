@@ -190,38 +190,6 @@
       </div>
     </header>
 
- <!-- section 1 -->
-<!-- <div class="content bg-white -mt-16 px-2 py-12">
-  <div class=" max-w-7xl mx-auto px-1 py-8 bg-white shadow-sm rounded-sm">
-    <div>
-      <h2 class="mb-0 text-center tracking-tight font-bold text-gray-900">
-        <span class="typewriter-text text-4xl introducing leading-tight z-10">Introducing<span class="inline text-lg">,</span>
-        </span><br>
-        <span class="typewriter-text text-4xl medicalink leading-10 z-0">Medicalink EMR<span class="inline text-xs relative bottom-4">™</span></span>
-      </h2>
-      
-      <div class="mt-0 text-center" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="600">
-        <div class="flex justify-center items-center max-w-full">
-          <img
-            id="image-resize"
-            src="assets/icons/mockup-4.png"
-            alt="Image"
-            class=" -mt-14 rounded-md object-cover w-full h-auto lg:max-h-[350px] lg:w-auto"
-          />
-        </div>
-        <p class="-mt-12 font-regular text-center mb-12 leading-8 text-gray-700">
-          Electronic medical records<br>providing secure & centralized<br>access to your health data
-        </p>
-        <a
-          href="https://emr.medicalink.lk"
-          class="text-white bg-medicalink-blue font-medium text-sm px-5 py-2.5 mr-2 mb-2 hover:bg-gray-600"
-        >
-          Get Started
-        </a>
-      </div>
-    </div>
-  </div>
-</div> -->
 
 <div class="bg-white mt-4 overflow-x-auto -mt-6 px-2 py-12">
   <div class="lg:max-w-7xl max-w-lg mx-auto px-1 py-8 bg-white shadow-sm rounded-sm">
@@ -243,33 +211,37 @@
           <img
             src="assets/icons/mockup-4.png"
             alt="Image"
-            style="width: 80%"
+            style="width: 75%"
             class="-mt-8 -mb-14 rounded-md object-cover w-full h-auto lg:max-h-[350px] lg:w-auto"
           />
         </div>
       </div>
 
       <!-- Second Column: Combined Animation -->
-      <div
-        id="aos-target-element"
-        class="flex flex-col justify-center items-center mt-0 text-center"
-        data-aos="fade-up"
-        data-aos-duration="1200"
-        data-aos-delay="800"
+      <div class="flex flex-col justify-center items-center mt-0 text-center"
+ 
       >
-        <div>
+        <div     
+         id="aos-target-element"  
+         data-aos="fade-up"
+         data-aos-duration="1200"
+         data-aos-delay="800">
           <p class="-mt-10 font-regular text-center mb-10 leading-8 text-gray-700">
             Electronic medical records<br>providing secure & centralized<br>access to your health data
           </p>
-          <div>
-          <a
-            href="https://emr.medicalink.lk"
-            class="text-white bg-medicalink-blue font-medium text-sm px-5 py-2.5 mr-2 mb-2 hover:bg-gray-600"
+         
+        </div>
+        <div 
+         id="aos-target-element-2"
+         data-aos="fade"
+         data-aos-duration="2200"
+         data-aos-delay="1300"> 
+         <a
+          href="https://emr.medicalink.lk"
+          class="text-white bg-medicalink-blue font-medium text-sm px-5 py-2.5 mr-2 mb-2 hover:bg-gray-600"
           >
-            Get Started
-          </a>
-        </div>
-        </div>
+          Get Started
+          </a></div>
       </div>
     </div>
   </div>
@@ -365,7 +337,7 @@
     </div>
   </div>
   
-  
+
   
 
   <div style="height: 125px;"></div>
@@ -473,6 +445,7 @@
 
     // Trigger the animation manually for the target element
     const targetElement = document.getElementById('aos-target-element');
+    const targetElement2 = document.getElementById('aos-target-element-2');
     
     // Check if the target element exists
     if (targetElement) {
@@ -480,6 +453,12 @@
       AOS.refresh();  // Refresh AOS before triggering the animation
       targetElement.setAttribute('data-aos', 'fade-up');  // Reset AOS animation
       targetElement.classList.add('aos-animate');  // Force animation
+    }
+    if (targetElement2) {
+      // Manually trigger AOS animation
+      AOS.refresh();  // Refresh AOS before triggering the animation
+      targetElement2.setAttribute('data-aos', 'fade');  // Reset AOS animation
+      targetElement2.classList.add('aos-animate');  // Force animation
     }
   });
         </script>
