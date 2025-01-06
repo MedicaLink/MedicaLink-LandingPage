@@ -249,6 +249,7 @@
 
       <!-- Second Column: Combined Animation -->
       <div
+        id="aos-target-element"
         class="flex flex-col justify-center items-center mt-0 text-center"
         data-aos="fade-up"
         data-aos-duration="1200"
@@ -469,9 +470,24 @@
       offset: 300, 
       once: true,          // Only trigger animations once
     });
-    
-    AOS.refresh();
 
+    document.addEventListener("DOMContentLoaded", function() {AOS.init({
+      once: true,  // Trigger the animation only once
+      duration: 1200,  // Animation duration (in ms)
+      delay: 600,  // Delay before the animation starts (in ms)
+    });
+
+    // Trigger the animation manually for the target element
+    const targetElement = document.getElementById('aos-target-element');
+    
+    // Check if the target element exists
+    if (targetElement) {
+      // Manually trigger AOS animation
+      AOS.refresh();  // Refresh AOS before triggering the animation
+      targetElement.setAttribute('data-aos', 'fade-up');  // Reset AOS animation
+      targetElement.classList.add('aos-animate');  // Force animation
+    }
+  });
         </script>
    
 
