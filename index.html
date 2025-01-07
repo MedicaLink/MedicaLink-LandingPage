@@ -63,7 +63,7 @@
 <body id="index">
 
 <!-- Header -->
-<header class="sticky inset-x-0 top-0 z-50 shadow-xs lg:shadow-sm bg-white rounded-sm">
+<header class="sticky inset-x-0 top-0 z-50 bg-white rounded-sm">
   <!-- Navigation -->
   <nav
     class="flex items-center justify-between px-6 py-2.5 lg:py-2.5 lg:px-8"
@@ -719,6 +719,23 @@
       targetElement2.classList.add("aos-animate");     // Force animation
     }
   });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+  // Select the header element
+  const header = document.querySelector('header');
+
+  // Add a scroll event listener to the window
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+      // Add shadow when the page is scrolled
+      header.classList.add('header-shadow');
+    } else {
+      // Remove shadow when scrolled back to the top
+      header.classList.remove('header-shadow');
+    }
+  });
+});
 </script>
 
 </body>
