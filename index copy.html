@@ -80,7 +80,7 @@
         />
       </a>
     </div>
-    <div class="flex lg:hidden ">
+    <div class="flex lg:hidden md:hidden">
       <button
         type="button"
         class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -212,15 +212,14 @@
   </div>
 </header>
 
-<div class="hidden md:block"><div style=" height: 50px; "></div></div>
 
 
 <!-- Introducing Medicalink -->
-<div class="bg-white overflow-x-auto px-2 py-12 ">
+<div class="bg-white mt-4 overflow-x-auto -mt-6 px-2 py-12">
   <!-- Content Wrapper -->
   <div class="flex max-w-full justify-center px-1 py-8 bg-white  rounded-sm">
     <!-- Grid Layout -->
-    <div class="max-w-screen-full grid grid-cols-1  gap-10">
+    <div class="max-w-8xl grid grid-cols-1  gap-10">
       
       <!-- Left Section: Introduction and Image -->
       <div class="max-w-7xl mx-auto px-1 py-8 bg-white">
@@ -228,10 +227,10 @@
         <div>
           <h2 class="-mt-20 text-center mb-2 tracking-tight font-medium text-gray-700">
             <span class="typewriter-text text-4xl introducing leading-tight z-10">
-              Introducing<span class="inline text-3xl">,</span> <span class="hidden md:inline-block">Medicalink EMR<span class="inline text-sm relative bottom-4">™</span></span>
+              Introducing<span class="inline text-3xl">,</span>
             </span>
             <br>
-            <span class="typewriter-text text-4xl medicalink leading-tight z-0 md:hidden">
+            <span class="typewriter-text text-4xl medicalink leading-tight z-0">
               Medicalink EMR<span class="inline text-sm relative bottom-4">™</span>
             </span>
           </h2>
@@ -247,8 +246,8 @@
           <img
             src="assets/icons/mockup-4.png"
             alt="Image"
-            style="width: 85%"
-            class="-mt-6 -mb-12 rounded-md object-cover w-full h-auto max-h-[400px]"
+            style="width: 75%"
+            class="-mt-6 -mb-12 rounded-md object-cover w-full h-auto max-h-[350px]"
           />
         </a>
       </div>
@@ -277,7 +276,7 @@
         >
           <a
             href="https://emr.medicalink.lk"
-            class="text-white bg-green-700 font-medium text-sm px-5 py-2.5 mr-2 mb-2 hover:bg-green-700 "
+            class="text-white bg-green-600 font-medium text-sm px-5 py-2.5 mr-2 mb-2 hover:bg-green-700 "
           >
             Get Started
           </a>
@@ -293,15 +292,11 @@
 <div class="grid mt-8 grid-cols-1 gap-4 lg:grid-cols-2">
 
   <!-- Section 1 -->
-  <button 
-  class="bg-white w-full hover:scale-[101%] focus:outline-none"
-  onclick="window.location.href='/emr.html'"
->
-  <div class="bg-white  px-2 py-10">
+  <div class="bg-white px-2 py-10">
      <!-- Content Wrapper -->
-    <div class="flex max-w-full justify-center px-1 py-20 bg-white  shadow rounded-sm">
+    <div class="flex max-w-full justify-center px-1 py-8 bg-white shadow rounded-sm">
       <!-- Grid Layout -->
-      <div class="max-w-8xl   grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <div class="max-w-8xl grid grid-cols-1 lg:grid-cols-2 gap-10">
 
       <!-- First Column: Image with AOS Animation -->
       <div class="flex justify-center items-center max-w-full order-first lg:order-first">
@@ -339,22 +334,27 @@
             </li>
           </ul>
         </div>
+        
+        <!-- Call to Action Button -->
+        <div class="mt-6 text-center">
+          <a 
+            href="/emr" 
+            class="text-white bg-medicalink-blue font-medium text-sm px-5 py-2.5 mr-2 mb-2 hover:bg-blue-500"
+          >
+            Discover
+          </a>
+        </div>
       </div>
 
-      </div>
     </div>
   </div>
-  </button>
+</div>
 
   
 <!-- Section 2 -->
-<button 
-class="bg-white w-full hover:scale-[101%] focus:outline-none"
-onclick="window.location.href='/research.html'"
->
 <div class="bg-white px-2 py-10">
   <!-- Content Wrapper -->
-  <div class="flex max-w-full justify-center px-1 py-20 bg-white shadow rounded-sm">
+  <div class="flex max-w-full justify-center px-1 py-8 bg-white shadow rounded-sm">
     <!-- Grid Layout -->
     <div class="grid grid-cols-1 lg:grid-cols-2 max-w-8xl gap-10">
 
@@ -383,7 +383,15 @@ onclick="window.location.href='/research.html'"
           </ul>
         </div>
 
-       
+        <!-- Call to Action Button -->
+        <div class="mt-6 text-center">
+          <a 
+            href="/emr" 
+            class="text-white bg-medicalink-blue font-medium text-sm px-5 py-2.5 mr-2 mb-2 hover:bg-blue-500"
+          >
+            Participate
+          </a>
+        </div>
       </div>
 
       <!-- Second Column: Image with AOS Animation -->
@@ -399,16 +407,11 @@ onclick="window.location.href='/research.html'"
     </div>
   </div>
 </div>
-</button>
 
 <!-- Section 3 -->
-<button 
-class="bg-white w-full hover:scale-[101%] focus:outline-none"
-onclick="window.location.href='/services.html'"
->
 <div class="bg-white px-2 py-10">
   <!-- Content Wrapper -->
-  <div class="flex max-w-full justify-center px-1 py-20 bg-white shadow rounded-sm">
+  <div class="flex max-w-full justify-center px-1 py-8 bg-white shadow rounded-sm">
     <!-- Grid Layout -->
     <div class="grid grid-cols-1 max-w-8xl lg:grid-cols-2 gap-10">
 
@@ -447,22 +450,25 @@ onclick="window.location.href='/services.html'"
           </ul>
         </div>
 
-        
+        <!-- Call to Action Button -->
+        <div class="mt-6 text-center">
+          <a 
+            href="/services" 
+            class="text-white bg-medicalink-blue font-medium text-sm px-5 py-2.5 mr-2 mb-2 hover:bg-500"
+          >
+            Explore
+          </a>
+        </div>
       </div>
 
     </div>
   </div>
 </div>
-</button>
 
 <!-- Section 4 -->
-<button 
-class="bg-white w-full hover:scale-[101%] focus:outline-none"
-onclick="window.location.href='/services.html'"
->
 <div class="bg-white px-2 py-10">
   <!-- Content Wrapper -->
-  <div class="flex max-w-full justify-center px-1 py-20 bg-white shadow rounded-sm">
+  <div class="flex max-w-full justify-center px-1 py-8 bg-white shadow rounded-sm">
     <!-- Grid Layout -->
     <div class="grid grid-cols-1 max-w-8xl lg:grid-cols-2 gap-10">
 
@@ -501,22 +507,25 @@ onclick="window.location.href='/services.html'"
           </ul>
         </div>
 
-        
+        <!-- Call to Action Button -->
+        <div class="mt-6 text-center">
+          <a 
+            href="/services" 
+            class="text-white bg-medicalink-blue font-medium text-sm px-5 py-2.5 mr-2 mb-2 hover:bg-500"
+          >
+            Explore
+          </a>
+        </div>
       </div>
 
     </div>
   </div>
 </div>
-</button>
 
 <!-- Section 5 -->
-<button 
-class="bg-white w-full hover:scale-[101%] focus:outline-none"
-onclick="window.location.href='/research.html'"
->
 <div class="bg-white px-2 py-10">
   <!-- Content Wrapper -->
-  <div class="flex max-w-full justify-center px-1 py-20 bg-white shadow rounded-sm">
+  <div class="flex max-w-full justify-center px-1 py-8 bg-white shadow rounded-sm">
     <!-- Grid Layout -->
     <div class="grid grid-cols-1 lg:grid-cols-2 max-w-8xl gap-10">
 
@@ -545,7 +554,15 @@ onclick="window.location.href='/research.html'"
           </ul>
         </div>
 
-        
+        <!-- Call to Action Button -->
+        <div class="mt-6 text-center">
+          <a 
+            href="/emr" 
+            class="text-white bg-medicalink-blue font-medium text-sm px-5 py-2.5 mr-2 mb-2 hover:bg-blue-500"
+          >
+            Participate
+          </a>
+        </div>
       </div>
 
       <!-- Second Column: Image with AOS Animation -->
@@ -560,7 +577,6 @@ onclick="window.location.href='/research.html'"
     </div>
   </div>
 </div>
-</button>
 
 
 

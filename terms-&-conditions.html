@@ -49,72 +49,72 @@
 
   <body id="terms-&-conditions">
 
-    <!-- Header -->
-    <header class="sticky inset-x-0 top-0 z-50 sticky shadow-xs lg:shadow-sm bg-white rounded-sm">
-      <!-- Navigation -->
-      <nav
-        class="flex items-center justify-between px-6 py-2.5 lg:py-2.5 lg:px-8"
-        aria-label="Global"
+<!-- Header -->
+<header class="sticky inset-x-0 top-0 z-50 sticky   bg-white rounded-sm">
+  <!-- Navigation -->
+  <nav
+    class="flex items-center justify-between px-6 py-2.5 lg:py-2.5 lg:px-8"
+    aria-label="Global"
+  >
+    <div class="flex lg:flex-1">
+      <a href="/" class="-m-1.5 p-1.5">
+        <span class="sr-only">MedicaLink</span>
+        <img
+          class="h-10 w-auto"
+          src="./assets/icons/main-logo-header.png"
+          alt=""
+        />
+      </a>
+    </div>
+    <div class="flex lg:hidden ">
+      <button
+        type="button"
+        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+        id="menu-btn"
       >
-        <div class="flex lg:flex-1">
-          <a href="/" class="-m-1.5 p-1.5">
-            <span class="sr-only">MedicaLink</span>
-            <img
-              class="h-10 w-auto"
-              src="./assets/icons/main-logo-header.png"
-              alt=""
-            />
-          </a>
-        </div>
-        <div class="flex lg:hidden md:hidden">
-          <button
-            type="button"
-            class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-            id="menu-btn"
-          >
-            <span class="sr-only">Open main menu</span>
-            <svg
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              aria-hidden="true"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
-            </svg>
-          </button>
-        </div>
-        <div class="hidden lg:flex lg:gap-x-12">
-          
-          <a href="/emr" class="text-sm font-medium leading-6 text-gray-900"
-            >EMR</a
-          >
-          <a
-            href="/research"
-            class="text-sm font-medium leading-6 text-gray-900"
-            >Research</a
-          >
-          <a
-            href="/services"
-            class="text-sm font-medium leading-6 text-gray-900"
-            >Services</a
-          >
-          <a href="/store" class="text-sm font-medium leading-6 text-gray-900"
-            >Store</a
-          >
-          <a href="/about" class="text-sm font-medium leading-6 text-gray-900"
-            >About Us</a
-          >
-        </div>
-        <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-            <a href="/contact" class="text-white justify-center bg-medicalink-blue font-medium text-sm px-4 py-2  hover:bg-gray-600">Contact Us</a>
-        </div>
+        <span class="sr-only">Open main menu</span>
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </button>
+    </div>
+    <div class="hidden lg:flex lg:gap-x-[60px]">
       
+      <a href="/emr" class=" font-medium leading-6 text-gray-700 hover:text-gray-400"
+        >EMR</a
+      >
+      <a
+        href="/research"
+        class="font-medium leading-6 text-gray-700 hover:text-gray-400"
+        >Research</a
+      >
+      <a
+        href="/services"
+        class=" font-medium leading-6 text-gray-700 hover:text-gray-400"
+        >Services</a
+      >
+      <a href="/store" class="font-medium leading-6 text-gray-700 hover:text-gray-400"
+        >Store</a
+      >
+      <a href="/about" class=" font-medium leading-6 text-gray-700 hover:text-gray-400"
+        >About Us</a
+      >
+    </div>
+    <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+        <a href="/contact" class="text-white justify-center bg-medicalink-blue font-medium text-sm px-4 py-2  hover:bg-gray-600">Contact Us</a>
+    </div>
+  
 
       <!-- Mobile menu, show/hide based on menu open state. -->
       <div class="hidden" role="dialog" aria-modal="true" id="sidebar">
@@ -309,58 +309,59 @@ class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-2xl xl:gap-16 md:grid m
 
 <div style="height: 75px;"></div>
 
-    <!-- Footer -->
+     <!-- Footer -->
 
-    <footer class="bg-medicalink-blue">
+     <footer class="bg-gray-200">
       <div class="w-full mx-auto p-8 md:py-8">
         <div class="sm:flex items-center mx-auto text-center">
           <ul
-            class="flex text-center justify-center items-center mx-auto text-sm font-light text-white mb-3 -mt-3 gap-8"
+            class="flex text-center justify-center items-center mx-auto text-sm font-light text-gray-500 mb-3 -mt-3 gap-8"
           >
             <li class="mb-2">
-              <a href="/terms-&-conditions" class="hover:text-gray-600">T & C</a>
+              <a href="/terms-&-conditions" class="hover:text-gray-400">T & C</a>
             </li>
             <li class="mb-2">
-              <a href="/privacy-notice" class="hover:text-gray-600"
+              <a href="/privacy-notice" class="hover:text-gray-400"
                 >Privacy Notice</a
               >
             </li>
             <li class="mb-2">
-              <a href="/support" class="hover:text-gray-600">Support</a>
+              <a href="/support" class="hover:text-gray-400">Support</a>
             </li>
           </ul>
         </div>
         <div class="flex items-center mx-auto text-center">
           <ul
-            class="flex flex-row text-center items-center mx-auto text-sm font-medium text-white gap-6 mb-4"
+            class="flex flex-row text-center items-center mx-auto text-sm font-medium text-gray-500 gap-6 mb-4"
           >
             <li>
               <a href="#">
-                <i class="fab fa-facebook-f fa-xl"></i>
+                <i class="fab fa-facebook-f  hover:text-gray-400 fa-xl"></i>
             </a>
             </li>
+            
             <li>
               <a href="https://www.linkedin.com/company/medicalinklanka"
-                ><i class="fab fa-linkedin fa-xl"></i></a>
+                ><i class="fab fa-linkedin hover:text-gray-400 fa-xl"></i></a>
+            </li>
+            <li>
+              <a href="#"
+                ><i class="fab fa-twitter hover:text-gray-400 fa-xl"></i></a>
             </li>
             <li>
               <a
                 href="https://www.instagram.com/medicalink.lk?igsh=MXIwYnk4MzRhM2E3YQ=="
-                ><i class="fab fa-instagram fa-xl"></i></a>
+                ><i class="fab fa-instagram hover:text-gray-400 fa-xl"></i></a>
             </li>
             
             <li>
               <a href="#"
-                ><i class="fab fa-youtube fa-xl"></i></a>
+                ><i class="fab hover:text-gray-400 fa-youtube fa-xl"></i></a>
             </li>
-            <li>
-              <a href="#"
-                ><i class="fab fa-x fa-xl"></i></a>
-            </li>
+            
           </ul>
         </div>
-        <hr class="border-white sm:mx-auto" />
-        <span class="block text-xs mt-2 -mb-5 font-light text-white text-center"
+        <span class="block text-xs -mb-5 font-light text-gray-500 text-center"
           >© 2025
           <a href="https://www.medicalink.lk/">Medicalink</a
           >. All Rights Reserved.</span
