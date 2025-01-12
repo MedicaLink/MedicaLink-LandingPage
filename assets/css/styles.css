@@ -212,3 +212,10 @@ h2 span {
 .carousel-caption h5, .carousel-caption p {
   margin: 0;         /* Remove any margin around the text */
 }
+
+/* Hide next and prev buttons on medium and smaller screens */
+@media (max-width: 768px) {
+  .carousel-control-prev, .carousel-control-next {
+    display: none;
+  }
+}
