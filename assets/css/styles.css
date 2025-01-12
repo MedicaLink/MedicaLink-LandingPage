@@ -106,7 +106,7 @@
 /* Media query for smaller screens */
 @media (min-width: 769px) {
   .introducing {
-    animation: typing 1s steps(150) forwards; /* Adjust the duration and steps */
+    animation: typing 2s steps(150) forwards; /* Adjust the duration and steps */
   }
 }
 
