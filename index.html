@@ -291,7 +291,7 @@
 </div>
 </div>
 
-<div id="carouselExample" class="carousel slide carousel-fade" data-ride="carousel" data-aos="fade-up">
+<div id="carouselExample" class="carousel slide carousel-fade" data-ride="carousel" data-aos="fade-up" data-aos-duration="1000">
   <div class="carousel-inner">
     <div class="carousel-item active" data-aos="zoom-in" >
       <img class="d-block w-100" src="assets/images/pexels1.jpg" alt="First slide">
@@ -764,7 +764,7 @@ console.log(maxOffset); // Prints the maximum offset that would make sense
             }
           });
         },
-        { threshold: 0.1 } // Trigger when 10% of the element is visible
+        { threshold: 0 } // Trigger when 10% of the element is visible
       );
 
       observer.observe(el);
