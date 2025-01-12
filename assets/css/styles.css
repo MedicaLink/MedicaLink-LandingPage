@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap'); */
 
+@import "tw-elements/dist/css/tw-elements.min.css";
+
+
 /* Colors */
 :root {
   --color-default-: ;
@@ -27,13 +30,6 @@
   box-sizing: border-box;
   /* font-family: "Outfit", sans-serif; */
 }
-
-
-body, html {
-  height: 100%; /* Ensure body and html take full viewport height */
-  margin: 0;    /* Remove default margin */
-  padding: 0;   /* Remove default padding */
-  }
 
 
 .main-content {
@@ -128,69 +124,42 @@ h2 span {
 }
 
 
-@keyframes blink {
-  0% {
-    opacity: 0;
+[data-aos] {
+  opacity: 0; /* Default state before animation */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+[data-aos].aos-animate {
+  opacity: 1; /* Ensure the element remains visible after animation */
+  transform: none; /* Reset any transformation applied during animation */
+}
+
+   /* Style the indicators */
+   .carousel-indicators {
+    position: absolute;
+    bottom: 15px; /* Adjust the vertical position */
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the indicators horizontally */
+    padding: 0;
+    list-style: none;
   }
-  50% {
-    opacity: 1;
+
+  .carousel-indicators li {
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
+    width: 30px;  /* Set the width for a more slender rectangular look */
+    height: 6px; /* Reduce the height to make them thinner */
+    margin: 0 5px; /* Spacing between the indicators */
+    border-radius: 5px; /* Optional: Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
   }
-  100% {
-    opacity: 1; /* Stay visible at the end */
+
+  /* Active indicator */
+  .carousel-indicators .active {
+    background-color: rgba(255, 255, 255, 1); /* Fully white for the active indicator */
   }
-}
 
-.blink-1,
-.blink-2,
-.blink-3 {
-  display: inline-block; /* Keeps the dots on the same line */
-  animation: blink 0.3s steps(1);
-  animation-fill-mode: forwards; 
-  animation-iteration-count: 1; 
-  opacity: 0; /* Initially hidden */
-}
-
-.blink-1 {
-  animation-delay: 0.3s; /* Starts immediately */
-}
-
-.blink-2 {
-  animation-delay: 0.6s; /* Starts after blink-1 */
-}
-
-.blink-3 {
-  animation-delay: 0.9s; /* Starts after blink-2 */
-}
-
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2000;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
+  /* Hover effect */
+  .carousel-indicators li:hover {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly brighter on hover */
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.fade-in {
-  animation: fadeIn 1s ease-out forwards;
-}
-
-a * {
-  pointer-events: auto !important;
-}
-
-.header-shadow {
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Custom shadow */
-  transition: box-shadow 0.3s ease; /* Smooth transition */
-}
