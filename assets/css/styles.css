@@ -214,8 +214,8 @@ h2 span {
 }
 
 /* Hide next and prev buttons on medium and smaller screens */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .carousel-control-prev, .carousel-control-next {
     display: none;
   }
-}
+} */
