@@ -730,8 +730,10 @@ console.log(maxOffset); // Prints the maximum offset that would make sense
 
     // Target specific elements for manual animation triggering
     const targetElement = document.getElementById("aos-target-element");
+    
     const targetElement2 = document.getElementById("aos-target-element-2");
 
+    const targetElement3 = document.getElementById("carouselExample");
     // Check and trigger animations for the first target element
     if (targetElement) {
       AOS.refresh(); // Refresh AOS before triggering the animation
@@ -739,15 +741,20 @@ console.log(maxOffset); // Prints the maximum offset that would make sense
       targetElement.classList.add("aos-animate");       // Force animation
     }
 
-    // Check and trigger animations for the second target element
     if (targetElement2) {
       AOS.refresh(); // Refresh AOS before triggering the animation
       targetElement2.setAttribute("data-aos", "fade"); // Set animation type
       targetElement2.classList.add("aos-animate");     // Force animation
     }
 
+    if (targetElement3) {
+      AOS.refresh(); // Refresh AOS before triggering the animation
+      targetElement3.setAttribute("data-aos", "fade"); // Set animation type
+      targetElement3.classList.add("aos-animate");     // Force animation
+    }
+
     // Optional: Add IntersectionObserver to ensure animations trigger when elements enter the viewport
-    const allTargetElements = [targetElement, targetElement2].filter(Boolean); // Filter out null elements
+    const allTargetElements = [targetElement, targetElement2, targetElement3].filter(Boolean); // Filter out null elements
     allTargetElements.forEach((el) => {
       const observer = new IntersectionObserver(
         (entries) => {
