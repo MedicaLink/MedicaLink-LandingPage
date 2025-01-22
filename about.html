@@ -540,20 +540,35 @@
 
 <script>
 $(document).ready(function() {
+  var slideDisabled = false; // Track whether the slide is disabled
+
   $(".owl-carousel").owlCarousel({
     items: 1,
     loop: true,
-    margin: 0,  // Remove margin between items
+    margin: 0, // Remove margin between items
     autoplay: true,
     autoplayTimeout: 5000,
     autoplayHoverPause: true,
     smartSpeed: 1000,
-    nav: false,  // Disable forward and back buttons
-    dots: true,  // Enable navigation dots
+    nav: false, // Disable forward and back buttons
+    dots: true, // Enable navigation dots
     dotClass: 'owl-dot',
     responsiveClass: true,
     onInitialized: function() {
       setUniformHeight(); // Set uniform height after the carousel is initialized
+    },
+    onDrag: function() {
+      if (!slideDisabled) {
+        // Disable autoplay when the user drags
+        $(".owl-carousel").trigger('stop.owl.autoplay');
+        slideDisabled = true;
+
+        // Re-enable autoplay after 5 seconds
+        setTimeout(function() {
+          $(".owl-carousel").trigger('play.owl.autoplay');
+          slideDisabled = false;
+        }, 5000);
+      }
     }
   });
 
