@@ -696,91 +696,12 @@ onclick="window.location.href='/research.html'"
 <!-- AOS Animation Library -->
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-<!-- AOS Initialization and Custom Configuration -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-  
-    AOS.init();
-
-    const maxOffset = document.body.scrollHeight - window.innerHeight;
-console.log(maxOffset); // Prints the maximum offset that would make sense
-
-
-    // Target specific elements for manual animation triggering
-    const targetElement = document.getElementById("aos-target-element");
-    
-    const targetElement2 = document.getElementById("aos-target-element-2");
-
-    const targetElement3 = document.getElementById("carouselExample");
-    // Check and trigger animations for the first target element
-    if (targetElement) {
-      AOS.refresh(); // Refresh AOS before triggering the animation
-      targetElement.setAttribute("data-aos", "fade-up"); // Set animation type
-      targetElement.classList.add("aos-animate");       // Force animation
-    }
-
-    if (targetElement2) {
-      AOS.refresh(); // Refresh AOS before triggering the animation
-      targetElement2.setAttribute("data-aos", "fade"); // Set animation type
-      targetElement2.classList.add("aos-animate");     // Force animation
-    }
-
-    if (targetElement3) {
-      AOS.refresh(); // Refresh AOS before triggering the animation
-      targetElement3.setAttribute("data-aos", "fade"); // Set animation type
-      targetElement3.classList.add("aos-animate");     // Force animation
-    }
-
-    // Optional: Add IntersectionObserver to ensure animations trigger when elements enter the viewport
-    const allTargetElements = [targetElement, targetElement2, targetElement3].filter(Boolean); // Filter out null elements
-    allTargetElements.forEach((el) => {
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              AOS.refresh(); // Refresh AOS when the element enters the viewport
-            }
-          });
-        },
-        { threshold: 0 } // Trigger when 10% of the element is visible
-      );
-
-      observer.observe(el);
-    });
-  });
+  // Initialize AOS when the script is loaded
+  AOS.init();
 </script>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const carousel = document.querySelector('#carouselExample');
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    // Listen for touchstart event
-    carousel.addEventListener('touchstart', function (e) {
-      touchStartX = e.changedTouches[0].screenX; // Get starting X coordinate
-    });
-
-    // Listen for touchend event
-    carousel.addEventListener('touchend', function (e) {
-      touchEndX = e.changedTouches[0].screenX; // Get ending X coordinate
-      handleSwipe();
-    });
-
-    function handleSwipe() {
-      if (touchStartX - touchEndX > 50) {
-        // Swipe left - go to the next slide
-        const bootstrapCarousel = new bootstrap.Carousel(carousel);
-        bootstrapCarousel.next();
-      } else if (touchEndX - touchStartX > 50) {
-        // Swipe right - go to the previous slide
-        const bootstrapCarousel = new bootstrap.Carousel(carousel);
-        bootstrapCarousel.prev();
-      }
-    }
-  });
-</script>
-
+<!-- owl carousel -->
 <script>
 $(document).ready(function() {
   $(".owl-carousel").owlCarousel({
