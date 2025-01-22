@@ -141,88 +141,48 @@ h2 span {
   transform: none; /* Reset any transformation applied during animation */
 }
 
-/* Style the indicators */
-.carousel-indicators {
+
+/* Ensure all items are vertically centered and maintain consistent height */
+.owl-carousel .item {
+  display: flex;               /* Use flexbox for vertical centering */
+  justify-content: center;     /* Center horizontally */
+  align-items: center;         /* Center vertically */
+  overflow: hidden;            /* Hide anything exceeding the item height */
+  max-height: 75vh;            /* Limit max height to 80% of the viewport height */
+  height: auto;                /* Allow height to adjust based on image's height */
+}
+
+/* Make sure images scale proportionally */
+.owl-carousel .item img {
+  width: 100%;                 /* Make image take up full width */
+  height: auto;                /* Maintain aspect ratio */
+  object-fit: cover;           /* Cover the container while maintaining aspect ratio */
+  max-height: 100%;            /* Ensure images do not exceed the item height */
+}
+
+/* Ensure navigation dots are above content */
+.owl-carousel .owl-dots {
   position: absolute;
-  bottom: 2px; /* Adjust the vertical position */
-  left: 0;
-  right: 0; /* Use both left and right to stretch it */
-  margin-left: auto;
-  margin-right: auto; /* These properties center the indicators */
-  text-align: center;  /* Centers the list items (indicators) horizontally */
-  z-index: 10;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 10; /* Ensure dots are on top */
 }
 
-.carousel-indicators li {
-  background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
-  width: 35px;  /* Set the width for a more slender rectangular look */
-  height: 4px; /* Reduce the height to make them thinner */
-  margin: 5px; /* Spacing between the indicators */
-  border-radius: 5px; /* Optional: Rounded corners */
-  transition: background-color 0.5s ease; /* Smooth transition on hover */
+/* Style each dot */
+.owl-carousel .owl-dots .owl-dot {
+  width: 40px;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 1px;
+  transition: background-color 0.3s ease;
 }
 
-/* Active indicator */
-.carousel-indicators .active {
-  background-color: rgba(255, 255, 255, 1); /* Fully white for the active indicator */
+/* Style for active dot */
+.owl-carousel .owl-dots .owl-dot.active {
+  background-color: rgba(255, 255, 255, 1);
 }
 
-/* Hover effect */
-.carousel-indicators li:hover {
-  background-color: rgba(255, 255, 255, 0.9); /* Slightly brighter on hover */
-}
-
-#carouselExample {
-  width: 100%;    /* Set to 100% of the container or use a fixed width like 600px */
-  height: 35vh;  /* Fixed height for uniformity */
-  overflow: hidden; /* Prevents any part of the image from overflowing */
-  position: relative; /* Make sure the container is positioned relative for proper caption centering */
-}
-
-/* Centering the carousel items and images */
-.carousel-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.carousel-item {
-  position: relative;  /* Ensure the carousel items are in position relative */
-  opacity: 0;  /* Hide carousel items initially */
-  transition: opacity 1s ease-in-out;  /* Smooth transition for opacity */
-  display: flex;  /* Ensure content inside is treated as flex items */
-  justify-content: center;  /* Center items horizontally */
-  align-items: center;  /* Center items vertically */
-  height: 100%;  /* Ensure full height for items */
-}
-
-.carousel-item.active {
-  opacity: 1;  /* Make active item visible */
-}
-
-.carousel-item img {
-  object-fit: cover;  /* Ensures the image covers the area without distortion */
-  width: 100%;
-  height: 100%;
-}
-
-.carousel-caption {
-  position: absolute;
-  top: 50%;          /* Vertically center */
-  left: 50%;         /* Horizontally center */
-  transform: translate(-50%, -50%);  /* Adjust positioning to perfectly center */
-  text-align: center;  /* Center text horizontally */
-  color: white;       /* Optional: Make text white for visibility */
-  width: 100%;        /* Make sure the caption stretches across the entire width */
-}
-
-.carousel-caption h5, .carousel-caption p {
-  margin: 0;         /* Remove any margin around the text */
-}
-
-/* Hide next and prev buttons on medium and smaller screens */
-/* @media (max-width: 768px) {
-  .carousel-control-prev, .carousel-control-next {
-    display: none;
-  }
-} */
