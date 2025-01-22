@@ -32,6 +32,12 @@
       crossorigin="anonymous"
     />
 
+<!-- Owl Carousel CSS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+
     <!-- AOS (Animate On Scroll) CSS -->
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
@@ -178,23 +184,37 @@
 
 
    <!-- About -->
-   <section class="bg-white">
-    <div class="py-8 px-4  mx-auto max-w-screen-full lg:py-16 lg:px-6 ">
       
-      <!-- section heading -->
-      <div class="text-center mb-16 mt-10 max-w-2xl mx-auto">
-        <h2 class="text-3xl font-medium tracking-tight text-gray-700 ">
+    <div class="owl-carousel">
+      <div class="item" style="background-image: url('assets/images/slider2.jpg'); background-size: cover; background-position: center; height: 50vh;"><div class="max-w-sm lg:max-w-xl p-5">
+        <h2 class="flex justify-center text-3xl mt-20 italic font-medium tracking-tight text-gray-700">
           Our Story
         </h2>
-        <p class="mt-4 mb-14 text-lg font-light leading-7 text-gray-600">
-          The Medicalink team is composed of dedicated professionals committed to revolutionizing healthcare with innovative digital solutions, ensuring the highest standard of care for your health data.
+        <p class="flex text-center mt-4 text-lg mb-16 italic font-light leading-7 text-gray-600">
+          The Medicalink team is composed of dedicated professionals committed to revolutionizing healthcare with innovative digital solutions, ensuring the highest standard of care for your health data.</p>
+      </div></div>
+      <div class="item" style="background-image: url('assets/images/slider2.jpg'); background-size: cover; background-position: center; height: 50vh;"><div class="max-w-sm lg:max-w-xl p-5">
+        <h2 class="flex justify-center text-3xl mt-20 italic font-medium tracking-tight text-gray-700">
+        The Vision
+        </h2>
+        <p class="flex text-center mt-4 text-lg mb-16 italic font-light leading-7 text-gray-600">
+          “To transform healthcare in Sri Lanka by replacing outdated paper systems with a secure, innovative digital platform, enabling easy access to critical health information for individuals and healthcare providers.”
         </p>
-      </div>
+      </div></div>
+      <div class="item" style="background-image: url('assets/images/slider3.jpg'); background-size: cover; background-position: center; height: 50vh;"><div class="max-w-sm lg:max-w-xl p-5">
+        <h2 class="flex text-3xl mt-14  font-medium italic justify-center tracking-tight text-gray-700">
+        The Mission
+        </h2>
+        <p class="flex text-center mt-4 text-lg mb-16 font-light italic leading-7 text-gray-600">
+          “To drive the digital transformation of healthcare in Sri Lanka, we aim to create a secure, centralized platform that simplifies access to health records, promotes collaboration among providers, and empowers individuals to manage their health.”
+        </p>
+      </div></div>
+
+      <!-- Add more items as needed -->
+    </div>
   
-      <!-- mission-visssion grid -->
-      <div class="grid mt-20 mx-auto max-w-7xl grid-cols-1 gap-4 lg:gap-10 mb-6 lg:grid-cols-2">
+      <!-- <div class="grid mt-20 mx-auto max-w-7xl grid-cols-1 gap-4 lg:gap-10 mb-6 lg:grid-cols-2">
   
-        <!-- vision -->
       <div class="items-center max-w-screen-full bg-gray-50 rounded-sm shadow justify-center sm:flex">
         <div class="flex justify-center">
         <div class="max-w-sm lg:max-w-xl p-5">
@@ -209,7 +229,7 @@
       </div>
     </div>
   
-        <!-- mission  -->
+  
         <div class="items-center max-w-screen-full bg-gray-50 rounded-sm shadow justify-center sm:flex">
             <div class="flex justify-center">
             <div class="max-w-sm lg:max-w-xl p-5">
@@ -222,36 +242,10 @@
             </div>
           </div>
         </div> 
-        </div>
-      </section>
+        </div> -->
 
 
-<!-- <section id="vision-mission">
-  <div class="mt-14">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="max-w-2xl text-center mx-auto">
-        <h2 class="text-3xl mt-20 font-light tracking-tight text-gray-900">
-          The Vision
-        </h2>
-        <p class="mt-4 text-lg mb-16 font-light leading-7 text-gray-600">
-          “To transform healthcare in Sri Lanka by replacing outdated paper systems with a secure, innovative digital platform, enabling easy access to critical health information for individuals and healthcare providers.”
-        </p>
-
-        <div class="w-1/2 border-t  border-gray-300 mx-auto my-4"></div>
-
-        <h2 class="text-3xl mt-14  font-light tracking-tight text-gray-900">
-          The Mission
-        </h2>
-        <p class=" mt-4 text-lg mb-16 font-light  leading-7 text-gray-600">
-          “To drive the digital transformation of healthcare in Sri Lanka, we aim to create a secure, centralized platform that simplifies access to health records, promotes collaboration among providers, and empowers individuals to manage their health.”
-        </p>
-        <div class="w-1/2  border-t border-gray-300 mx-auto my-4"></div>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-
+        <div style="height: 75px;"></div>
 
 
 <!-- Team -->
@@ -531,6 +525,45 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
     <script src="./assets/js/main.js"></script>
+
+     <!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+$(document).ready(function() {
+  $(".owl-carousel").owlCarousel({
+    items: 1,
+    loop: true,
+    margin: 0,  // Remove margin between items
+    autoplay: true,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+    smartSpeed: 1000,
+    nav: false,  // Disable forward and back buttons
+    dots: true,  // Enable navigation dots
+    dotClass: 'owl-dot',
+    responsiveClass: true,
+    onInitialized: function() {
+      setUniformHeight(); // Set uniform height after the carousel is initialized
+    }
+  });
+
+  function setUniformHeight() {
+    var minHeight = Math.min.apply(null, $('.owl-carousel .item img').map(function() {
+      return $(this).height();
+    }).get());
+    
+    $('.owl-carousel .item').height(minHeight);  // Set the uniform height for all items
+  }
+  
+  // Trigger the function again if the images load or the window resizes
+  $(window).on('load resize', function() {
+    setUniformHeight();
+  });
+});
+
+</script>
   </body>
 </html>
