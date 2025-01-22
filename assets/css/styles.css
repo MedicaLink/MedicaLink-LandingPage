@@ -163,7 +163,7 @@ h2 span {
 /* Ensure navigation dots are above content */
 .owl-carousel .owl-dots {
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;

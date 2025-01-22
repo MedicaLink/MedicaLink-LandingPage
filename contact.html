@@ -78,8 +78,8 @@ throttle: 10000,
 
   <body id="about">
 
- <!-- Header -->
- <header class="sticky inset-x-0 top-0 z-50 sticky   bg-white rounded-sm">
+<!-- Header -->
+<header class="sticky inset-x-0 top-0 z-50 bg-white rounded-sm">
   <!-- Navigation -->
   <nav
     class="flex items-center justify-between px-6 py-2.5 lg:py-2.5 lg:px-8"
@@ -95,7 +95,7 @@ throttle: 10000,
         />
       </a>
     </div>
-    <div class="flex lg:hidden ">
+    <div class="flex lg:hidden">
       <button
         type="button"
         class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -119,105 +119,86 @@ throttle: 10000,
       </button>
     </div>
     <div class="hidden lg:flex lg:gap-x-[60px]">
-      
-      <a href="/emr" class=" font-medium leading-6 text-gray-700 hover:text-gray-400"
-        >EMR</a
-      >
-      <a
-        href="/research"
-        class="font-medium leading-6 text-gray-700 hover:text-gray-400"
-        >Research</a
-      >
-      <a
-        href="/services"
-        class=" font-medium leading-6 text-gray-700 hover:text-gray-400"
-        >Services</a
-      >
-      <a href="/store" class="font-medium leading-6 text-gray-700 hover:text-gray-400"
-        >Store</a
-      >
-      <a href="/about" class=" font-medium leading-6 text-gray-700 hover:text-gray-400"
-        >About Us</a
-      >
+      <!-- Removed underline on hover with hover:no-underline -->
+      <a href="/emr" class="font-medium leading-6 text-gray-700 hover:text-gray-400 hover:no-underline">
+        EMR
+      </a>
+      <a href="/research" class="font-medium leading-6 text-gray-700 hover:text-gray-400 hover:no-underline">
+        Research
+      </a>
+      <a href="/services" class="font-medium leading-6 text-gray-700 hover:text-gray-400 hover:no-underline">
+        Services
+      </a>
+      <a href="/store" class="font-medium leading-6 text-gray-700 hover:text-gray-400 hover:no-underline">
+        Store
+      </a>
+      <a href="/about" class="font-medium leading-6 text-gray-700 hover:text-gray-400 hover:no-underline">
+        About Us
+      </a>
     </div>
     <div class="hidden lg:flex lg:flex-1 lg:justify-end">
-        <a href="/contact" class="text-white justify-center bg-medicalink-blue font-medium text-sm px-4 py-2  hover:bg-gray-600">Contact Us</a>
+      <button 
+        class="text-white bg-medicalink-blue font-medium text-sm justify-center px-4 py-2 hover:scale-[103%] focus:outline-none"
+        onclick="window.location.href='/contact'"
+      >
+        Contact Us
+      </button>
     </div>
+  </nav>
   
-      <!-- Mobile menu, show/hide based on menu open state. -->
-      <div class="hidden" role="dialog" aria-modal="true" id="sidebar">
-        <div
-          class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-2.5 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+  <!-- Mobile Menu (Sidebar) -->
+  <div class="hidden" role="dialog" aria-modal="true" id="sidebar">
+    <div
+      class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-2.5 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
+    >
+      <!-- Sidebar Header -->
+      <div class="flex items-center justify-between">
+        <a href="/" class="-m-1.5 p-1.5">
+          <span class="sr-only">MedicaLink</span>
+          <img
+            class="h-10 w-auto"
+            src="./assets/icons/main-logo-header.png"
+            alt=""
+          />
+        </a>
+        <button
+          type="button"
+          class="-m-2.5 rounded-md p-2.5 text-gray-700"
+          id="close-btn"
         >
-          <div class="flex items-center justify-between">
-            <a href="/" class="-m-1.5 p-1.5">
-              <span class="sr-only">MedicaLink</span>
-              <img
-                class="h-10 w-auto"
-                src="./assets/icons/main-logo-header.png"
-                alt=""
-              />
-            </a>
-            <button
-              type="button"
-              class="-m-2.5 rounded-md p-2.5 text-gray-700"
-              id="close-btn"
-            >
-              <span class="sr-only">Close menu</span>
-              <svg
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-          <div class="mt-6 flow-root">
-              <div class="space-y-4 py-8">
-                <a
-                  href="/emr"
-                  class="-mx-3 block text-center rounded-sm px-3 py-2 text-lg font-medium leading-7 text-gray-900 hover:bg-gray-200"
-                  >EMR</a
-                >
-                <a
-                  href="/research"
-                  class="-mx-3 block text-center rounded-sm px-3 py-2 text-lg font-medium leading-7 text-gray-900 hover:bg-gray-200"
-                  >Research</a
-                >
-                <a
-                  href="/services"
-                  class="-mx-3 block text-center rounded-sm px-3 py-2 text-lg font-medium leading-7 text-gray-900 hover:bg-gray-200"
-                  >Services</a
-                >
-                <a
-                  href="/store"
-                  class="-mx-3 block text-center rounded-sm px-3 py-2 text-lg font-medium leading-7 text-gray-900 hover:bg-gray-200"
-                  >Store</a
-                >
-                <a
-                  href="/about"
-                  class="-mx-3 block text-center rounded-sm px-3 py-2 text-lg font-medium leading-7 text-gray-900 hover:bg-gray-200"
-                  >About</a
-                >
-                  <a
-                  href="/contact"
-                  class="-mx-3 block text-center rounded-sm px-3 py-2 text-lg font-medium leading-7 text-gray-900 hover:bg-gray-200"
-                  >Contact Us</a
-                >
-              </div>
-          </div>
+          <span class="sr-only">Close menu</span>
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            aria-hidden="true"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Sidebar Navigation Links -->
+      <div class="mt-6 flow-root">
+        <div class="space-y-4 py-8">
+          <a href="/emr" class="-mx-3 block text-center rounded-sm px-3 py-2 text-lg font-medium leading-7 text-gray-900 hover:text-gray-900 hover:bg-gray-200 hover:no-underline">EMR</a>
+<a href="/research" class="-mx-3 block text-center rounded-sm px-3 py-2 text-lg font-medium leading-7 text-gray-900 hover:text-gray-900 hover:bg-gray-200 hover:no-underline">Research</a>
+<a href="/services" class="-mx-3 block text-center rounded-sm px-3 py-2 text-lg font-medium leading-7 text-gray-900 hover:text-gray-900 hover:bg-gray-200 hover:no-underline">Services</a>
+<a href="/store" class="-mx-3 block text-center rounded-sm px-3 py-2 text-lg font-medium leading-7 text-gray-900 hover:text-gray-900 hover:bg-gray-200 hover:no-underline">Store</a>
+<a href="/about" class="-mx-3 block text-center rounded-sm px-3 py-2 text-lg font-medium leading-7 text-gray-900 hover:text-gray-900 hover:bg-gray-200 hover:no-underline">About</a>
+<a href="/contact" class="-mx-3 block text-center rounded-sm px-3 py-2 text-lg font-medium leading-7 text-gray-900 hover:text-gray-900 hover:bg-gray-200 hover:no-underline">Contact Us</a>
+
         </div>
       </div>
-    </nav>
-    </header>
+    </div>
+  </div>
+</header>
 
     <!-- Contact Us -->
 <section id="contactus">
